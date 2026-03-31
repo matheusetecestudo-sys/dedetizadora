@@ -177,10 +177,10 @@ Design profissional e altamente conversivo via WhatsApp
     <!-- 3. Hero Section -->
     <section id="inicio" class="relative min-h-screen flex items-center bg-primary overflow-hidden">
         <!-- Background Image with Overlay -->
-        <div class="absolute inset-0 z-0">
-            <!-- Nova imagem de banner mais premium e limpa -->
-            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop" alt="Casa Limpa" class="w-full h-full object-cover opacity-60 mix-blend-luminosity">
-            <div class="absolute inset-0 bg-gradient-to-r from-primary via-primary/90 to-primary/40"></div>
+        <div class="absolute inset-0 z-0 bg-primary">
+            <!-- Nova imagem focada no tema de segurança/desinfecção profissional -->
+            <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=2070&auto=format&fit=crop" alt="Equipe de Proteção e Dedetização" class="w-full h-full object-cover opacity-50 mix-blend-luminosity">
+            <div class="absolute inset-0 bg-gradient-to-r from-primary via-primary/95 to-primary/50"></div>
         </div>
 
         <div class="container mx-auto px-6 relative z-10 pt-20">
@@ -602,9 +602,9 @@ Design profissional e altamente conversivo via WhatsApp
                     </a>
                 </div>
                 
-                <div class="lg:w-1/2 relative min-h-[400px]">
+                <div class="lg:w-1/2 relative min-h-[250px] lg:min-h-[auto] rounded-[2rem] overflow-hidden m-4 shadow-inner">
                     <!-- Google Maps Placeholder (Embed realistic style) -->
-                    <div class="absolute inset-0 grayscale">
+                    <div class="absolute inset-0 grayscale hover:grayscale-0 transition-all duration-700">
                         <iframe 
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d116964.8465697262!2d-46.73244675!3d-23.51458885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce597d3419357d%3A0xe96431945f3c5b52!2zU8OjbyBQYXVsbywgU1A!5e0!3m2!1spt-BR!2sbr!4v1711915000000!5m2!1spt-BR!2sbr" 
                             width="100%" height="100%" loading="lazy" class="border-none"></iframe>
@@ -691,20 +691,25 @@ Design profissional e altamente conversivo via WhatsApp
             }, 2000);
         });
 
-        // Reveal Animations
-        const reveal = () => {
-            const reveals = document.querySelectorAll('.reveal');
-            reveals.forEach(el => {
-                const windowHeight = window.innerHeight;
-                const elementTop = el.getBoundingClientRect().top;
-                const elementVisible = 150;
-                if (elementTop < windowHeight - elementVisible) {
-                    el.classList.add('active');
-                }
-            });
+        // Intersection Observer para Animações de Scroll Profissionais (Fade + Slide)
+        const revealOptions = {
+            threshold: 0.15,
+            rootMargin: "0px 0px -50px 0px"
         };
-        window.addEventListener('scroll', reveal);
-        window.addEventListener('load', reveal);
+        
+        const revealObserver = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) {
+                    return;
+                }
+                entry.target.classList.add('active');
+                // Opcional: Descomente a linha abaixo para animar apenas na primeira vez que aparece
+                // observer.unobserve(entry.target); 
+            });
+        }, revealOptions);
+
+        const reveals = document.querySelectorAll('.reveal');
+        reveals.forEach(el => revealObserver.observe(el));
 
         // Counter Animation
         const counters = document.querySelectorAll('.counter');
