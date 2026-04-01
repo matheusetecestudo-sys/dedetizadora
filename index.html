@@ -110,12 +110,16 @@ Design profissional e altamente conversivo via WhatsApp
 
         /* WhatsApp SVG icon helper */
         .wz-icon { 
-            width: 1.5rem;
-            height: 1.5rem;
+            width: 1.25rem;
+            height: 1.25rem;
             fill: currentColor;
             flex-shrink: 0;
             display: inline-block;
             vertical-align: middle;
+        }
+        @media (max-width: 640px) {
+            .wz-icon { width: 1.1rem; height: 1.1rem; }
+            .btn-mobile-fix { font-size: 0.95rem !important; padding-left: 1rem !important; padding-right: 1rem !important; gap: 0.5rem !important; }
         }
 
         /* Mobile improvements */
@@ -201,7 +205,7 @@ Design profissional e altamente conversivo via WhatsApp
 
             <!-- CTA -->
             <div class="flex items-center gap-4">
-                <a href="https://wa.me/5511999999999" target="_blank" class="hidden sm:flex items-center gap-3 bg-accent hover:bg-emerald-500 text-white px-6 py-2.5 rounded-full text-sm font-semibold transition-all shadow-lg shadow-accent/20">
+                <a href="https://wa.me/5511992876219" target="_blank" class="hidden sm:flex items-center gap-3 bg-accent hover:bg-emerald-500 text-white px-6 py-2.5 rounded-full text-sm font-semibold transition-all shadow-lg shadow-accent/20">
                     <svg class="wz-icon" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
                     WhatsApp
                 </a>
@@ -220,7 +224,7 @@ Design profissional e altamente conversivo via WhatsApp
                 <a @click="mobileMenu = false" href="#sobre" class="text-lg text-white font-medium">Sobre Nós</a>
                 <a @click="mobileMenu = false" href="#como-funciona" class="text-lg text-white font-medium">Como Funciona</a>
                 <a @click="mobileMenu = false" href="#faq" class="text-lg text-white font-medium">FAQ</a>
-                <a href="https://wa.me/5511999999999" class="bg-accent text-white py-4 rounded-xl text-center font-bold flex items-center justify-center gap-2">
+                <a href="https://wa.me/5511992876219" class="bg-accent text-white py-4 rounded-xl text-center font-bold flex items-center justify-center gap-2">
                     <svg class="wz-icon" style="width:1.4em;height:1.4em" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
                     Solicitar Orçamento
                 </a>
@@ -257,12 +261,12 @@ Design profissional e altamente conversivo via WhatsApp
                 </p>
 
                 <div class="flex flex-col sm:flex-row items-center gap-4 reveal" style="transition-delay: 600ms;">
-                    <a href="https://wa.me/5511999999999" class="w-full sm:w-auto px-8 py-5 bg-accent hover:bg-emerald-500 text-white rounded-2xl font-bold text-lg transition-all shadow-2xl shadow-accent/30 flex items-center justify-center gap-4 transform hover:-translate-y-1">
+                    <a href="https://wa.me/5511992876219" class="w-full sm:w-auto px-6 py-4 bg-accent hover:bg-emerald-500 text-white rounded-2xl font-bold flex items-center justify-center transition-all shadow-2xl shadow-accent/30 transform hover:-translate-y-1 btn-mobile-fix text-center">
                         <svg class="wz-icon" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-                        <span class="whitespace-nowrap">Atendimento WhatsApp</span>
+                        <span class="whitespace-nowrap">Agendar WhatsApp</span>
                     </a>
-                    <a href="#servicos" class="w-full sm:w-auto px-10 py-5 bg-white/10 hover:bg-white/20 text-white border border-white/10 backdrop-blur-md rounded-2xl font-bold text-lg transition-all flex items-center justify-center gap-2">
-                        Ver Serviços
+                    <a href="#servicos" class="w-full sm:w-auto px-6 py-4 bg-white/10 hover:bg-white/20 text-white border border-white/10 backdrop-blur-md rounded-2xl font-bold flex items-center justify-center transition-all btn-mobile-fix text-center">
+                        Nossos Serviços
                     </a>
                 </div>
 
@@ -350,7 +354,7 @@ Design profissional e altamente conversivo via WhatsApp
                         <div class="absolute inset-x-0 bottom-0 p-8">
                             <h4 class="text-2xl font-bold text-white mb-2 tracking-tight">Controle de Baratas</h4>
                             <p class="text-slate-300 text-sm leading-relaxed mb-4 line-clamp-2">Tratamento de precisão com barreira química de longa duração.</p>
-                            <a href="https://wa.me/5511999999999" class="inline-flex items-center gap-2 text-accent font-bold uppercase text-xs tracking-widest group/link">
+                            <a href="https://wa.me/5511992876219" class="inline-flex items-center gap-2 text-accent font-bold uppercase text-xs tracking-widest group/link">
                                 Ver Detalhes <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover/link:translate-x-2"></i>
                             </a>
                         </div>
@@ -365,7 +369,7 @@ Design profissional e altamente conversivo via WhatsApp
                         <div class="absolute inset-x-0 bottom-0 p-8">
                             <h4 class="text-2xl font-bold text-white mb-2 tracking-tight">Desratização</h4>
                             <p class="text-slate-300 text-sm leading-relaxed mb-4 line-clamp-2">Eliminação técnica de colônias com iscas de alta performance.</p>
-                            <a href="https://wa.me/5511999999999" class="inline-flex items-center gap-2 text-accent font-bold uppercase text-xs tracking-widest group/link">
+                            <a href="https://wa.me/5511992876219" class="inline-flex items-center gap-2 text-accent font-bold uppercase text-xs tracking-widest group/link">
                                 Ver Detalhes <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover/link:translate-x-2"></i>
                             </a>
                         </div>
@@ -380,7 +384,7 @@ Design profissional e altamente conversivo via WhatsApp
                         <div class="absolute inset-x-0 bottom-0 p-8">
                             <h4 class="text-2xl font-bold text-white mb-2 tracking-tight">Descupinização</h4>
                             <p class="text-slate-300 text-sm leading-relaxed mb-4 line-clamp-2">Proteção estrutural total com injeção pressurizada.</p>
-                            <a href="https://wa.me/5511999999999" class="inline-flex items-center gap-2 text-accent font-bold uppercase text-xs tracking-widest group/link">
+                            <a href="https://wa.me/5511992876219" class="inline-flex items-center gap-2 text-accent font-bold uppercase text-xs tracking-widest group/link">
                                 Ver Detalhes <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover/link:translate-x-2"></i>
                             </a>
                         </div>
@@ -395,7 +399,7 @@ Design profissional e altamente conversivo via WhatsApp
                         <div class="absolute inset-x-0 bottom-0 p-8">
                             <h4 class="text-2xl font-bold text-white mb-2 tracking-tight">Controle de Formigas</h4>
                             <p class="text-slate-300 text-sm leading-relaxed mb-4 line-clamp-2">Erradicação sistêmica de formigueiros urbanos sem cheiro.</p>
-                            <a href="https://wa.me/5511999999999" class="inline-flex items-center gap-2 text-accent font-bold uppercase text-xs tracking-widest group/link">
+                            <a href="https://wa.me/5511992876219" class="inline-flex items-center gap-2 text-accent font-bold uppercase text-xs tracking-widest group/link">
                                 Ver Detalhes <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover/link:translate-x-2"></i>
                             </a>
                         </div>
@@ -410,7 +414,7 @@ Design profissional e altamente conversivo via WhatsApp
                         <div class="absolute inset-x-0 bottom-0 p-8">
                             <h4 class="text-2xl font-bold text-white mb-2 tracking-tight">Escorpiões</h4>
                             <p class="text-slate-300 text-sm leading-relaxed mb-4 line-clamp-2">Manejo higiênico e barreira química microencapsulada.</p>
-                            <a href="https://wa.me/5511999999999" class="inline-flex items-center gap-2 text-accent font-bold uppercase text-xs tracking-widest group/link">
+                            <a href="https://wa.me/5511992876219" class="inline-flex items-center gap-2 text-accent font-bold uppercase text-xs tracking-widest group/link">
                                 Ver Detalhes <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover/link:translate-x-2"></i>
                             </a>
                         </div>
@@ -425,7 +429,7 @@ Design profissional e altamente conversivo via WhatsApp
                         <div class="absolute inset-x-0 bottom-0 p-8">
                             <h4 class="text-2xl font-bold text-white mb-2 tracking-tight">PHE & Corporativo</h4>
                             <p class="text-slate-300 text-sm leading-relaxed mb-4 line-clamp-2">Manejo Integrado de Pragas (MIP) avançado.</p>
-                            <a href="https://wa.me/5511999999999" class="inline-flex items-center gap-2 text-accent font-bold uppercase text-xs tracking-widest group/link">
+                            <a href="https://wa.me/5511992876219" class="inline-flex items-center gap-2 text-accent font-bold uppercase text-xs tracking-widest group/link">
                                 Ver Detalhes <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover/link:translate-x-2"></i>
                             </a>
                         </div>
@@ -434,7 +438,7 @@ Design profissional e altamente conversivo via WhatsApp
             </div>
             
             <div class="mt-16 text-center reveal">
-                <a href="https://wa.me/5511999999999" class="bg-card text-white border border-white/10 px-10 py-5 rounded-2xl font-bold flex items-center gap-3 mx-auto w-fit hover:bg-slate-800 transition-all shadow-xl">
+                <a href="https://wa.me/5511992876219" class="bg-card text-white border border-white/10 px-10 py-5 rounded-2xl font-bold flex items-center gap-3 mx-auto w-fit hover:bg-slate-800 transition-all shadow-xl">
                     Não viu sua praga aqui? Consulte Nossos Biólogos
                     <i data-lucide="help-circle" class="w-5 h-5 text-accent"></i>
                 </a>
@@ -716,7 +720,7 @@ Design profissional e altamente conversivo via WhatsApp
                         </div>
                     </div>
                     
-                    <a href="https://wa.me/5511999999999" class="w-full py-5 bg-accent hover:bg-emerald-500 text-white rounded-2xl font-bold text-lg flex items-center justify-center gap-3 transition-all transform hover:scale-[1.02]">
+                    <a href="https://wa.me/5511992876219" class="w-full py-5 bg-accent hover:bg-emerald-500 text-white rounded-2xl font-bold text-lg flex items-center justify-center gap-3 transition-all transform hover:scale-[1.02]">
                         <svg class="wz-icon" style="width:1.6em;height:1.6em" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
                         Iniciar Conversa no WhatsApp
                     </a>
@@ -792,7 +796,7 @@ Design profissional e altamente conversivo via WhatsApp
     </footer>
 
     <!-- 11. Floating WhatsApp -->
-    <a href="https://wa.me/5511999999999" target="_blank" class="fixed bottom-6 right-6 z-[60] flex items-center gap-3 animate-float">
+    <a href="https://wa.me/5511992876219" target="_blank" class="fixed bottom-6 right-6 z-[60] flex items-center gap-3 animate-float">
         <div class="bg-white px-4 py-2 rounded-2xl shadow-xl text-primary font-bold text-sm hidden md:block">
             Dúvidas? Fale Conosco agora!
         </div>
