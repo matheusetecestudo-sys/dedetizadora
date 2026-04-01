@@ -120,19 +120,39 @@ Design profissional e altamente conversivo via WhatsApp
 
         /* Glassmorphism Classes */
         .glass-card {
-            background: rgba(22, 30, 46, 0.7);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            background: rgba(22, 30, 46, 0.4);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
         }
         
         .faq-card {
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 1px solid rgba(0, 0, 0, 0.03);
         }
         .faq-card:hover {
             background: white;
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.02);
-            transform: translateY(-2px);
+            box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.08);
+            transform: translateY(-5px);
+            border-color: #10B981;
+        }
+
+        .footer-link {
+            position: relative;
+            transition: color 0.3s;
+        }
+        .footer-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1px;
+            bottom: -2px;
+            left: 0;
+            background-color: #10B981;
+            transition: width 0.3s;
+        }
+        .footer-link:hover::after {
+            width: 100%;
         }
     </style>
 </head>
@@ -316,13 +336,14 @@ Design profissional e altamente conversivo via WhatsApp
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
                 <!-- Service 1: Baratas -->
                 <div class="group bg-card rounded-[2.5rem] overflow-hidden border border-white/5 service-card reveal shadow-2xl relative" style="transition-delay: 100ms;">
-                    <div class="h-64 overflow-hidden relative">
-                        <img src="/images/servico_baratas.png" alt="Dedetização de Baratas" class="w-full h-full object-cover card-img transition-transform duration-1000 group-hover:scale-110">
-                        <div class="absolute inset-x-0 bottom-0 p-8 glass-card">
+                    <div class="h-64 sm:h-80 overflow-hidden relative">
+                        <img src="/images/servico_baratas.png" alt="Dedetização de Baratas" class="w-full h-full object-cover card-img transition-transform duration-1000 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-card via-card/20 to-transparent"></div>
+                        <div class="absolute inset-x-0 bottom-0 p-8">
                             <h4 class="text-2xl font-bold text-white mb-2 tracking-tight">Controle de Baratas</h4>
-                            <p class="text-slate-300 text-sm leading-relaxed mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500 h-0 group-hover:h-auto overflow-hidden">Tratamento de precisão com barreira química invisível e duradoura.</p>
-                            <a href="https://wa.me/5511999999999" class="inline-flex items-center gap-2 text-accent font-bold uppercase text-xs tracking-widest group/link transition-all">
-                                Orçamento <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover/link:translate-x-2"></i>
+                            <p class="text-slate-300 text-sm leading-relaxed mb-4 line-clamp-2">Tratamento de precisão com barreira química de longa duração.</p>
+                            <a href="https://wa.me/5511999999999" class="inline-flex items-center gap-2 text-accent font-bold uppercase text-xs tracking-widest group/link">
+                                Ver Detalhes <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover/link:translate-x-2"></i>
                             </a>
                         </div>
                     </div>
@@ -330,13 +351,14 @@ Design profissional e altamente conversivo via WhatsApp
 
                 <!-- Service 2: Ratos -->
                 <div class="group bg-card rounded-[2.5rem] overflow-hidden border border-white/5 service-card reveal shadow-2xl relative" style="transition-delay: 200ms;">
-                    <div class="h-64 overflow-hidden relative">
-                        <img src="/images/servico_ratos.png" alt="Desratização" class="w-full h-full object-cover card-img transition-transform duration-1000 group-hover:scale-110">
-                        <div class="absolute inset-x-0 bottom-0 p-8 glass-card">
+                    <div class="h-64 sm:h-80 overflow-hidden relative">
+                        <img src="/images/servico_ratos.png" alt="Desratização" class="w-full h-full object-cover card-img transition-transform duration-1000 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-card via-card/20 to-transparent"></div>
+                        <div class="absolute inset-x-0 bottom-0 p-8">
                             <h4 class="text-2xl font-bold text-white mb-2 tracking-tight">Desratização</h4>
-                            <p class="text-slate-300 text-sm leading-relaxed mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500 h-0 group-hover:h-auto overflow-hidden">Eliminação técnica de colônias com iscas de alta performance.</p>
-                            <a href="https://wa.me/5511999999999" class="inline-flex items-center gap-2 text-accent font-bold uppercase text-xs tracking-widest group/link transition-all">
-                                Orçamento <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover/link:translate-x-2"></i>
+                            <p class="text-slate-300 text-sm leading-relaxed mb-4 line-clamp-2">Eliminação técnica de colônias com iscas de alta performance.</p>
+                            <a href="https://wa.me/5511999999999" class="inline-flex items-center gap-2 text-accent font-bold uppercase text-xs tracking-widest group/link">
+                                Ver Detalhes <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover/link:translate-x-2"></i>
                             </a>
                         </div>
                     </div>
@@ -344,13 +366,14 @@ Design profissional e altamente conversivo via WhatsApp
 
                 <!-- Service 3: Cupins -->
                 <div class="group bg-card rounded-[2.5rem] overflow-hidden border border-white/5 service-card reveal shadow-2xl relative" style="transition-delay: 300ms;">
-                    <div class="h-64 overflow-hidden relative">
-                        <img src="/images/servico_cupins.png" alt="Descupinização" class="w-full h-full object-cover card-img transition-transform duration-1000 group-hover:scale-110">
-                        <div class="absolute inset-x-0 bottom-0 p-8 glass-card">
+                    <div class="h-64 sm:h-80 overflow-hidden relative">
+                        <img src="/images/servico_cupins.png" alt="Descupinização" class="w-full h-full object-cover card-img transition-transform duration-1000 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-card via-card/20 to-transparent"></div>
+                        <div class="absolute inset-x-0 bottom-0 p-8">
                             <h4 class="text-2xl font-bold text-white mb-2 tracking-tight">Descupinização</h4>
-                            <p class="text-slate-300 text-sm leading-relaxed mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500 h-0 group-hover:h-auto overflow-hidden">Proteção estrutural total com injeção pressurizada intra-madeira.</p>
-                            <a href="https://wa.me/5511999999999" class="inline-flex items-center gap-2 text-accent font-bold uppercase text-xs tracking-widest group/link transition-all">
-                                Orçamento <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover/link:translate-x-2"></i>
+                            <p class="text-slate-300 text-sm leading-relaxed mb-4 line-clamp-2">Proteção estrutural total com injeção pressurizada.</p>
+                            <a href="https://wa.me/5511999999999" class="inline-flex items-center gap-2 text-accent font-bold uppercase text-xs tracking-widest group/link">
+                                Ver Detalhes <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover/link:translate-x-2"></i>
                             </a>
                         </div>
                     </div>
@@ -358,13 +381,14 @@ Design profissional e altamente conversivo via WhatsApp
 
                 <!-- Service 4: Formigas -->
                 <div class="group bg-card rounded-[2.5rem] overflow-hidden border border-white/5 service-card reveal shadow-2xl relative" style="transition-delay: 400ms;">
-                    <div class="h-64 overflow-hidden relative">
-                        <img src="/images/servico_formigas.png" alt="Controle de Formigas" class="w-full h-full object-cover card-img transition-transform duration-1000 group-hover:scale-110">
-                        <div class="absolute inset-x-0 bottom-0 p-8 glass-card">
+                    <div class="h-64 sm:h-80 overflow-hidden relative">
+                        <img src="/images/servico_formigas.png" alt="Controle de Formigas" class="w-full h-full object-cover card-img transition-transform duration-1000 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-card via-card/20 to-transparent"></div>
+                        <div class="absolute inset-x-0 bottom-0 p-8">
                             <h4 class="text-2xl font-bold text-white mb-2 tracking-tight">Controle de Formigas</h4>
-                            <p class="text-slate-300 text-sm leading-relaxed mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500 h-0 group-hover:h-auto overflow-hidden">Erradicação sistêmica de formigueiros urbanos sem cheiro.</p>
-                            <a href="https://wa.me/5511999999999" class="inline-flex items-center gap-2 text-accent font-bold uppercase text-xs tracking-widest group/link transition-all">
-                                Orçamento <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover/link:translate-x-2"></i>
+                            <p class="text-slate-300 text-sm leading-relaxed mb-4 line-clamp-2">Erradicação sistêmica de formigueiros urbanos sem cheiro.</p>
+                            <a href="https://wa.me/5511999999999" class="inline-flex items-center gap-2 text-accent font-bold uppercase text-xs tracking-widest group/link">
+                                Ver Detalhes <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover/link:translate-x-2"></i>
                             </a>
                         </div>
                     </div>
@@ -372,13 +396,14 @@ Design profissional e altamente conversivo via WhatsApp
 
                 <!-- Service 5: Escorpiões -->
                 <div class="group bg-card rounded-[2.5rem] overflow-hidden border border-white/5 service-card reveal shadow-2xl relative" style="transition-delay: 500ms;">
-                    <div class="h-64 overflow-hidden relative">
-                        <img src="/images/servico_escorpioes.png" alt="Controle de Escorpiões" class="w-full h-full object-cover card-img transition-transform duration-1000 group-hover:scale-110">
-                        <div class="absolute inset-x-0 bottom-0 p-8 glass-card">
+                    <div class="h-64 sm:h-80 overflow-hidden relative">
+                        <img src="/images/servico_escorpioes.png" alt="Controle de Escorpiões" class="w-full h-full object-cover card-img transition-transform duration-1000 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-card via-card/20 to-transparent"></div>
+                        <div class="absolute inset-x-0 bottom-0 p-8">
                             <h4 class="text-2xl font-bold text-white mb-2 tracking-tight">Escorpiões</h4>
-                            <p class="text-slate-300 text-sm leading-relaxed mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500 h-0 group-hover:h-auto overflow-hidden">Manejo higiênico e barreira química microencapsulada de alta aderência.</p>
-                            <a href="https://wa.me/5511999999999" class="inline-flex items-center gap-2 text-accent font-bold uppercase text-xs tracking-widest group/link transition-all">
-                                Orçamento <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover/link:translate-x-2"></i>
+                            <p class="text-slate-300 text-sm leading-relaxed mb-4 line-clamp-2">Manejo higiênico e barreira química microencapsulada.</p>
+                            <a href="https://wa.me/5511999999999" class="inline-flex items-center gap-2 text-accent font-bold uppercase text-xs tracking-widest group/link">
+                                Ver Detalhes <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover/link:translate-x-2"></i>
                             </a>
                         </div>
                     </div>
@@ -386,13 +411,14 @@ Design profissional e altamente conversivo via WhatsApp
 
                 <!-- Service 6: Empresas -->
                 <div class="group bg-card rounded-[2.5rem] overflow-hidden border border-white/5 service-card reveal shadow-2xl relative" style="transition-delay: 600ms;">
-                    <div class="h-64 overflow-hidden relative">
-                        <img src="/images/servico_corporativo.png" alt="Plano Corporativo" class="w-full h-full object-cover card-img transition-transform duration-1000 group-hover:scale-110">
-                        <div class="absolute inset-x-0 bottom-0 p-8 glass-card">
+                    <div class="h-64 sm:h-80 overflow-hidden relative">
+                        <img src="/images/servico_corporativo.png" alt="Plano Corporativo" class="w-full h-full object-cover card-img transition-transform duration-1000 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-card via-card/20 to-transparent"></div>
+                        <div class="absolute inset-x-0 bottom-0 p-8">
                             <h4 class="text-2xl font-bold text-white mb-2 tracking-tight">PHE & Corporativo</h4>
-                            <p class="text-slate-300 text-sm leading-relaxed mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500 h-0 group-hover:h-auto overflow-hidden">Manejo Integrado de Pragas (MIP) com documentação completa.</p>
-                            <a href="https://wa.me/5511999999999" class="inline-flex items-center gap-2 text-accent font-bold uppercase text-xs tracking-widest group/link transition-all">
-                                Orçamento <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover/link:translate-x-2"></i>
+                            <p class="text-slate-300 text-sm leading-relaxed mb-4 line-clamp-2">Manejo Integrado de Pragas (MIP) avançado.</p>
+                            <a href="https://wa.me/5511999999999" class="inline-flex items-center gap-2 text-accent font-bold uppercase text-xs tracking-widest group/link">
+                                Ver Detalhes <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover/link:translate-x-2"></i>
                             </a>
                         </div>
                     </div>
@@ -526,60 +552,68 @@ Design profissional e altamente conversivo via WhatsApp
                 <h3 class="text-4xl font-bold text-primary">Tudo o que Você Precisa Saber</h3>
             </div>
 
-            <div class="grid md:grid-cols-1 gap-6" x-data="{ openFaq: null }">
+            <div class="grid md:grid-cols-2 gap-8" x-data="{ openFaq: null }">
                 <!-- Item 1 -->
-                <div class="faq-card bg-white rounded-3xl reveal overflow-hidden">
-                    <button @click="openFaq = openFaq === 1 ? null : 1" class="w-full px-10 py-8 flex items-center justify-between text-left transition-all" :class="openFaq === 1 ? 'bg-slate-50' : ''">
-                        <span class="font-bold text-xl text-primary flex items-center gap-4">
-                            <span class="w-8 h-8 rounded-full bg-accent text-white flex items-center justify-center text-xs">P1</span>
-                            Quanto tempo dura o efeito da dedetização?
+                <div class="faq-card bg-white rounded-[2rem] reveal overflow-hidden border border-slate-100">
+                    <button @click="openFaq = openFaq === 1 ? null : 1" class="w-full px-8 py-7 flex items-center justify-between text-left transition-all" :class="openFaq === 1 ? 'bg-slate-50' : ''">
+                        <span class="font-bold text-lg text-primary flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-accent/10 text-accent flex items-center justify-center shrink-0">
+                                <i data-lucide="timer" class="w-5 h-5"></i>
+                            </div>
+                            Tempo de efeito?
                         </span>
-                        <i data-lucide="chevron-down" class="text-accent transition-transform duration-500" :class="openFaq === 1 ? 'rotate-180' : ''"></i>
+                        <i data-lucide="plus" class="text-accent transition-transform duration-500" :class="openFaq === 1 ? 'rotate-45 scale-125' : ''"></i>
                     </button>
-                    <div x-show="openFaq === 1" x-collapse class="px-10 pb-8 text-slate-600 bg-slate-50 text-lg leading-relaxed border-t border-slate-100">
-                        Geralmente, a garantia preventiva varia de 3 a 6 meses, dependendo do tipo de praga e das condições do ambiente. Fornecemos certificado comprovando a eficácia.
+                    <div x-show="openFaq === 1" x-collapse class="px-8 pb-7 text-slate-600 bg-slate-50 leading-relaxed border-t border-slate-100/50">
+                        A proteção preventiva dura de 3 a 6 meses. O certificado da DUNO garante a eficácia real durante todo o período.
                     </div>
                 </div>
 
                 <!-- Item 2 -->
-                <div class="faq-card bg-white rounded-3xl reveal overflow-hidden">
-                    <button @click="openFaq = openFaq === 2 ? null : 2" class="w-full px-10 py-8 flex items-center justify-between text-left transition-all" :class="openFaq === 2 ? 'bg-slate-50' : ''">
-                        <span class="font-bold text-xl text-primary flex items-center gap-4">
-                            <span class="w-8 h-8 rounded-full bg-accent text-white flex items-center justify-center text-xs">P2</span>
-                            Preciso sair de casa durante o serviço?
+                <div class="faq-card bg-white rounded-[2rem] reveal overflow-hidden border border-slate-100">
+                    <button @click="openFaq = openFaq === 2 ? null : 2" class="w-full px-8 py-7 flex items-center justify-between text-left transition-all" :class="openFaq === 2 ? 'bg-slate-50' : ''">
+                        <span class="font-bold text-lg text-primary flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-accent/10 text-accent flex items-center justify-center shrink-0">
+                                <i data-lucide="home" class="w-5 h-5"></i>
+                            </div>
+                            Sair de casa?
                         </span>
-                        <i data-lucide="chevron-down" class="text-accent transition-transform duration-500" :class="openFaq === 2 ? 'rotate-180' : ''"></i>
+                        <i data-lucide="plus" class="text-accent transition-transform duration-500" :class="openFaq === 2 ? 'rotate-45 scale-125' : ''"></i>
                     </button>
-                    <div x-show="openFaq === 2" x-collapse class="px-10 pb-8 text-slate-600 bg-slate-50 text-lg leading-relaxed border-t border-slate-100">
-                        Para a maioria dos tratamentos externos e em gel, não é necessário sair. Em pulverizações pesadas, recomendamos o afastamento de 2 a 4 horas para sua maior segurança e conforto.
+                    <div x-show="openFaq === 2" x-collapse class="px-8 pb-7 text-slate-600 bg-slate-50 leading-relaxed border-t border-slate-100/50">
+                        Geralmente não. Iscas e gel permitem rotina normal. Pulverizações pedem apenas 2 a 4 horas de afastamento.
                     </div>
                 </div>
 
                 <!-- Item 3 -->
-                <div class="faq-card bg-white rounded-3xl reveal overflow-hidden">
-                    <button @click="openFaq = openFaq === 3 ? null : 3" class="w-full px-10 py-8 flex items-center justify-between text-left transition-all" :class="openFaq === 3 ? 'bg-slate-50' : ''">
-                        <span class="font-bold text-xl text-primary flex items-center gap-4">
-                            <span class="w-8 h-8 rounded-full bg-accent text-white flex items-center justify-center text-xs">P3</span>
-                            Os produtos são tóxicos para animais?
+                <div class="faq-card bg-white rounded-[2rem] reveal overflow-hidden border border-slate-100">
+                    <button @click="openFaq = openFaq === 3 ? null : 3" class="w-full px-8 py-7 flex items-center justify-between text-left transition-all" :class="openFaq === 3 ? 'bg-slate-50' : ''">
+                        <span class="font-bold text-lg text-primary flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-accent/10 text-accent flex items-center justify-center shrink-0">
+                                <i data-lucide="dog" class="w-5 h-5"></i>
+                            </div>
+                            Seguro para pets?
                         </span>
-                        <i data-lucide="chevron-down" class="text-accent transition-transform duration-500" :class="openFaq === 3 ? 'rotate-180' : ''"></i>
+                        <i data-lucide="plus" class="text-accent transition-transform duration-500" :class="openFaq === 3 ? 'rotate-45 scale-125' : ''"></i>
                     </button>
-                    <div x-show="openFaq === 3" x-collapse class="px-10 pb-8 text-slate-600 bg-slate-50 text-lg leading-relaxed border-t border-slate-100">
-                        Utilizamos produtos registrados na Anvisa ativos apenas para pragas-alvo. Com a secagem e ventilação adequada, o ambiente torna-se totalmente seguro para pets.
+                    <div x-show="openFaq === 3" x-collapse class="px-8 pb-7 text-slate-600 bg-slate-50 leading-relaxed border-t border-slate-100/50">
+                        Sim. Produtos domissanitários registrados na Anvisa, seguros para mamíferos após o período de secagem.
                     </div>
                 </div>
 
                 <!-- Item 4 -->
-                <div class="faq-card bg-white rounded-3xl reveal overflow-hidden">
-                    <button @click="openFaq = openFaq === 4 ? null : 4" class="w-full px-10 py-8 flex items-center justify-between text-left transition-all" :class="openFaq === 4 ? 'bg-slate-50' : ''">
-                        <span class="font-bold text-xl text-primary flex items-center gap-4">
-                            <span class="w-8 h-8 rounded-full bg-accent text-white flex items-center justify-center text-xs">P4</span>
-                            A dedetização deixa cheiro forte?
+                <div class="faq-card bg-white rounded-[2rem] reveal overflow-hidden border border-slate-100">
+                    <button @click="openFaq = openFaq === 4 ? null : 4" class="w-full px-8 py-7 flex items-center justify-between text-left transition-all" :class="openFaq === 4 ? 'bg-slate-50' : ''">
+                        <span class="font-bold text-lg text-primary flex items-center gap-4">
+                            <div class="w-10 h-10 rounded-xl bg-accent/10 text-accent flex items-center justify-center shrink-0">
+                                <i data-lucide="wind" class="w-5 h-5"></i>
+                            </div>
+                            Deixa cheiro?
                         </span>
-                        <i data-lucide="chevron-down" class="text-accent transition-transform duration-500" :class="openFaq === 4 ? 'rotate-180' : ''"></i>
+                        <i data-lucide="plus" class="text-accent transition-transform duration-500" :class="openFaq === 4 ? 'rotate-45 scale-125' : ''"></i>
                     </button>
-                    <div x-show="openFaq === 4" x-collapse class="px-10 pb-8 text-slate-600 bg-slate-50 text-lg leading-relaxed border-t border-slate-100">
-                        Não. Trabalhamos com aplicações em gel e soluções microencapsuladas de última geração que são praticamente inodoras, garantindo seu conforto imediato.
+                    <div x-show="openFaq === 4" x-collapse class="px-8 pb-7 text-slate-600 bg-slate-50 leading-relaxed border-t border-slate-100/50">
+                        Inodoro. Nossas tecnologias microencapsuladas não liberam odores e não mancham superfícies.
                     </div>
                 </div>
             </div>
@@ -641,50 +675,57 @@ Design profissional e altamente conversivo via WhatsApp
     </section>
 
     <!-- 10. Footer -->
-    <footer class="bg-slate-900 pt-20 pb-10 text-white border-t border-white/5">
-        <div class="container mx-auto px-6">
-            <div class="grid md:grid-cols-4 gap-12 border-b border-white/10 pb-16">
+    <footer class="bg-primary pt-24 pb-12 text-white relative overflow-hidden">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(16,185,129,0.05),transparent_50%)]"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="grid md:grid-cols-4 gap-16 border-b border-white/5 pb-20">
                 <div class="col-span-2">
                     <div class="flex items-center gap-2 mb-8">
-                        <div class="bg-accent p-1.5 rounded-lg">
-                            <i data-lucide="shield" class="w-6 h-6 text-white"></i>
+                        <div class="bg-accent p-2 rounded-xl">
+                            <i data-lucide="shield" class="w-7 h-7 text-white"></i>
                         </div>
-                        <span class="text-2xl font-bold tracking-tighter">DUNO</span>
+                        <span class="text-3xl font-bold tracking-tight">DUNO<span class="text-accent">.</span></span>
                     </div>
-                    <p class="text-slate-400 max-w-sm mb-8">
-                        Excelência no controle de pragas desde 2010. Qualidade atestada, licenças em dia e satisfação garantida.
+                    <p class="text-slate-400 max-w-sm mb-10 leading-relaxed text-lg">
+                        Protegendo o que importa com ciência e tecnologia desde 2010. Qualidade atestada e certificado Anvisa.
                     </p>
-                    <div class="flex gap-4">
-                        <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-accent hover:scale-110 transition-all"><i data-lucide="instagram" class="w-5 h-5"></i></a>
-                        <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-accent hover:scale-110 transition-all"><i data-lucide="facebook" class="w-5 h-5"></i></a>
-                        <a href="#" class="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center hover:bg-accent hover:scale-110 transition-all"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+                    <div class="flex gap-5">
+                        <a href="#" class="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center hover:bg-accent hover:text-white transition-all transform hover:-translate-y-1 shadow-lg"><i data-lucide="instagram" class="w-6 h-6"></i></a>
+                        <a href="#" class="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center hover:bg-accent hover:text-white transition-all transform hover:-translate-y-1 shadow-lg"><i data-lucide="facebook" class="w-6 h-6"></i></a>
+                        <a href="#" class="w-12 h-12 rounded-2xl bg-white/5 flex items-center justify-center hover:bg-accent hover:text-white transition-all transform hover:-translate-y-1 shadow-lg"><i data-lucide="linkedin" class="w-6 h-6"></i></a>
                     </div>
                 </div>
                 
                 <div>
-                    <h5 class="text-lg font-bold mb-6">Links Úteis</h5>
+                    <h5 class="text-white font-bold mb-8 text-xl">Links Rápidos</h5>
                     <ul class="space-y-4 text-slate-400">
-                        <li><a href="#inicio" class="hover:text-white transition-colors">Início</a></li>
-                        <li><a href="#servicos" class="hover:text-white transition-colors">Serviços</a></li>
-                        <li><a href="#como-funciona" class="hover:text-white transition-colors">Como Funciona</a></li>
-                        <li><a href="#faq" class="hover:text-white transition-colors">FAQ</a></li>
+                        <li><a href="#inicio" class="footer-link hover:text-accent">Início</a></li>
+                        <li><a href="#servicos" class="footer-link hover:text-accent">Serviços</a></li>
+                        <li><a href="#sobre" class="footer-link hover:text-accent">A Empresa</a></li>
+                        <li><a href="#faq" class="footer-link hover:text-accent">Central de Dúvidas</a></li>
                     </ul>
                 </div>
                 
                 <div>
-                    <h5 class="text-lg font-bold mb-6">Institucional</h5>
-                    <div class="bg-white/5 p-6 rounded-2xl border border-white/10 text-center">
-                        <i data-lucide="shield-check" class="w-12 h-12 text-accent mx-auto mb-4"></i>
-                        <p class="text-sm">Empresa com Certificado Digital e Licença Sanitária Vigilância Sanitária em dia.</p>
+                    <h5 class="text-white font-bold mb-8 text-xl">Certificações</h5>
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-3 text-slate-400 text-sm bg-white/5 p-4 rounded-2xl border border-white/5 hover:border-accent/30 transition-all">
+                            <i data-lucide="check-circle" class="text-accent w-5 h-5 shrink-0"></i>
+                            Registro Anvisa 3.011-2
+                        </div>
+                        <div class="flex items-center gap-3 text-slate-400 text-sm bg-white/5 p-4 rounded-2xl border border-white/5 hover:border-accent/30 transition-all">
+                            <i data-lucide="award" class="text-accent w-5 h-5 shrink-0"></i>
+                            ISO 9001 Professional
+                        </div>
                     </div>
                 </div>
             </div>
             
-            <div class="pt-8 flex flex-col md:flex-row justify-between items-center text-sm text-slate-500 gap-4">
-                <p>&copy; 2024 DUNO Dedetizadora. Todos os direitos reservados.</p>
-                <div class="flex gap-8">
-                    <a href="#" class="hover:text-white">Termos de Uso</a>
-                    <a href="#" class="hover:text-white">Privacidade</a>
+            <div class="pt-12 flex flex-col md:flex-row justify-between items-center text-sm text-slate-500 gap-6">
+                <p>&copy; 2024 DUNO Dedetizadora. CNPJ 00.000.000/0001-00. São Paulo/SP.</p>
+                <div class="flex gap-10">
+                    <a href="#" class="hover:text-white transition-colors">Políticas de Privacidade</a>
+                    <a href="#" class="hover:text-white transition-colors">Termos de Serviço</a>
                 </div>
             </div>
         </div>
