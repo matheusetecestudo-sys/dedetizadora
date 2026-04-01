@@ -117,6 +117,23 @@ Design profissional e altamente conversivo via WhatsApp
             .hero-sub  { font-size: 1rem !important; }
             .section-pad { padding-top: 4rem !important; padding-bottom: 4rem !important; }
         }
+
+        /* Glassmorphism Classes */
+        .glass-card {
+            background: rgba(22, 30, 46, 0.7);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        
+        .faq-card {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .faq-card:hover {
+            background: white;
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.02);
+            transform: translateY(-2px);
+        }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-900 font-sans selection:bg-accent selection:text-white" x-data="{ mobileMenu: false, scrolled: false }" @scroll.window="scrolled = (window.pageYOffset > 50)">
@@ -296,94 +313,88 @@ Design profissional e altamente conversivo via WhatsApp
                 <p class="text-slate-400">Eliminamos desde insetos rasteiros até pragas urbanas complexas, sempre com laudo técnico e garantia por escrito.</p>
             </div>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
                 <!-- Service 1: Baratas -->
-                <div class="bg-card rounded-[2rem] overflow-hidden border border-white/10 service-card reveal shadow-2xl" style="transition-delay: 100ms;">
-                    <div class="h-56 overflow-hidden relative">
-                        <img src="/images/servico_baratas.png" alt="Dedetização de Baratas" class="w-full h-full object-cover card-img transition-transform duration-700">
-                        <div class="absolute inset-0 bg-gradient-to-t from-card via-transparent to-transparent opacity-60"></div>
-                    </div>
-                    <div class="p-8">
-                        <h4 class="text-2xl font-bold mb-3 text-white tracked-tight">Controle de Baratas</h4>
-                        <p class="text-slate-300 mb-6 text-sm leading-relaxed">Tratamento de precisão em ninhos e barreiras químicas de longa duração com tecnologia avançada.</p>
-                        <a href="https://wa.me/5511999999999" class="inline-flex items-center gap-2 text-accent font-bold group-hover:gap-4 transition-all uppercase text-xs tracking-widest border-b border-accent/30 pb-1">
-                            Solicitar Orçamento <i data-lucide="chevron-right" class="w-4 h-4"></i>
-                        </a>
+                <div class="group bg-card rounded-[2.5rem] overflow-hidden border border-white/5 service-card reveal shadow-2xl relative" style="transition-delay: 100ms;">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="/images/servico_baratas.png" alt="Dedetização de Baratas" class="w-full h-full object-cover card-img transition-transform duration-1000 group-hover:scale-110">
+                        <div class="absolute inset-x-0 bottom-0 p-8 glass-card">
+                            <h4 class="text-2xl font-bold text-white mb-2 tracking-tight">Controle de Baratas</h4>
+                            <p class="text-slate-300 text-sm leading-relaxed mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500 h-0 group-hover:h-auto overflow-hidden">Tratamento de precisão com barreira química invisível e duradoura.</p>
+                            <a href="https://wa.me/5511999999999" class="inline-flex items-center gap-2 text-accent font-bold uppercase text-xs tracking-widest group/link transition-all">
+                                Orçamento <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover/link:translate-x-2"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Service 2: Ratos -->
-                <div class="bg-card rounded-[2rem] overflow-hidden border border-white/10 service-card reveal shadow-2xl" style="transition-delay: 200ms;">
-                    <div class="h-56 overflow-hidden relative">
-                        <img src="/images/servico_ratos.png" alt="Desratização" class="w-full h-full object-cover card-img transition-transform duration-700">
-                        <div class="absolute inset-0 bg-gradient-to-t from-card via-transparent to-transparent opacity-60"></div>
-                    </div>
-                    <div class="p-8">
-                        <h4 class="text-2xl font-bold mb-3 text-white tracked-tight">Desratização Avançada</h4>
-                        <p class="text-slate-300 mb-6 text-sm leading-relaxed">Controle de roedores com iscas de alta palatabilidade e mapeamento técnico de colônias.</p>
-                        <a href="https://wa.me/5511999999999" class="inline-flex items-center gap-2 text-accent font-bold group-hover:gap-4 transition-all uppercase text-xs tracking-widest border-b border-accent/30 pb-1">
-                            Solicitar Orçamento <i data-lucide="chevron-right" class="w-4 h-4"></i>
-                        </a>
+                <div class="group bg-card rounded-[2.5rem] overflow-hidden border border-white/5 service-card reveal shadow-2xl relative" style="transition-delay: 200ms;">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="/images/servico_ratos.png" alt="Desratização" class="w-full h-full object-cover card-img transition-transform duration-1000 group-hover:scale-110">
+                        <div class="absolute inset-x-0 bottom-0 p-8 glass-card">
+                            <h4 class="text-2xl font-bold text-white mb-2 tracking-tight">Desratização</h4>
+                            <p class="text-slate-300 text-sm leading-relaxed mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500 h-0 group-hover:h-auto overflow-hidden">Eliminação técnica de colônias com iscas de alta performance.</p>
+                            <a href="https://wa.me/5511999999999" class="inline-flex items-center gap-2 text-accent font-bold uppercase text-xs tracking-widest group/link transition-all">
+                                Orçamento <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover/link:translate-x-2"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Service 3: Cupins -->
-                <div class="bg-card rounded-[2rem] overflow-hidden border border-white/10 service-card reveal shadow-2xl" style="transition-delay: 300ms;">
-                    <div class="h-56 overflow-hidden relative">
-                        <img src="/images/servico_cupins.png" alt="Descupinização" class="w-full h-full object-cover card-img transition-transform duration-700">
-                        <div class="absolute inset-0 bg-gradient-to-t from-card via-transparent to-transparent opacity-60"></div>
-                    </div>
-                    <div class="p-8">
-                        <h4 class="text-2xl font-bold mb-3 text-white tracked-tight">Descupinização</h4>
-                        <p class="text-slate-300 mb-6 text-sm leading-relaxed">Imunização completa de estruturas de madeira com injeção pressurizada e barreira química.</p>
-                        <a href="https://wa.me/5511999999999" class="inline-flex items-center gap-2 text-accent font-bold group-hover:gap-4 transition-all uppercase text-xs tracking-widest border-b border-accent/30 pb-1">
-                            Solicitar Orçamento <i data-lucide="chevron-right" class="w-4 h-4"></i>
-                        </a>
+                <div class="group bg-card rounded-[2.5rem] overflow-hidden border border-white/5 service-card reveal shadow-2xl relative" style="transition-delay: 300ms;">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="/images/servico_cupins.png" alt="Descupinização" class="w-full h-full object-cover card-img transition-transform duration-1000 group-hover:scale-110">
+                        <div class="absolute inset-x-0 bottom-0 p-8 glass-card">
+                            <h4 class="text-2xl font-bold text-white mb-2 tracking-tight">Descupinização</h4>
+                            <p class="text-slate-300 text-sm leading-relaxed mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500 h-0 group-hover:h-auto overflow-hidden">Proteção estrutural total com injeção pressurizada intra-madeira.</p>
+                            <a href="https://wa.me/5511999999999" class="inline-flex items-center gap-2 text-accent font-bold uppercase text-xs tracking-widest group/link transition-all">
+                                Orçamento <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover/link:translate-x-2"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Service 4: Formigas -->
-                <div class="bg-card rounded-[2rem] overflow-hidden border border-white/10 service-card reveal shadow-2xl" style="transition-delay: 400ms;">
-                    <div class="h-56 overflow-hidden relative">
-                        <img src="/images/servico_formigas.png" alt="Controle de Formigas" class="w-full h-full object-cover card-img transition-transform duration-700">
-                        <div class="absolute inset-0 bg-gradient-to-t from-card via-transparent to-transparent opacity-60"></div>
-                    </div>
-                    <div class="p-8">
-                        <h4 class="text-2xl font-bold mb-3 text-white tracked-tight">Controle de Formigas</h4>
-                        <p class="text-slate-300 mb-6 text-sm leading-relaxed">Eliminação definitiva de colônias com gel sistêmico inodoro e seguro para sua família.</p>
-                        <a href="https://wa.me/5511999999999" class="inline-flex items-center gap-2 text-accent font-bold group-hover:gap-4 transition-all uppercase text-xs tracking-widest border-b border-accent/30 pb-1">
-                            Solicitar Orçamento <i data-lucide="chevron-right" class="w-4 h-4"></i>
-                        </a>
+                <div class="group bg-card rounded-[2.5rem] overflow-hidden border border-white/5 service-card reveal shadow-2xl relative" style="transition-delay: 400ms;">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="/images/servico_formigas.png" alt="Controle de Formigas" class="w-full h-full object-cover card-img transition-transform duration-1000 group-hover:scale-110">
+                        <div class="absolute inset-x-0 bottom-0 p-8 glass-card">
+                            <h4 class="text-2xl font-bold text-white mb-2 tracking-tight">Controle de Formigas</h4>
+                            <p class="text-slate-300 text-sm leading-relaxed mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500 h-0 group-hover:h-auto overflow-hidden">Erradicação sistêmica de formigueiros urbanos sem cheiro.</p>
+                            <a href="https://wa.me/5511999999999" class="inline-flex items-center gap-2 text-accent font-bold uppercase text-xs tracking-widest group/link transition-all">
+                                Orçamento <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover/link:translate-x-2"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Service 5: Escorpiões -->
-                <div class="bg-card rounded-[2rem] overflow-hidden border border-white/10 service-card reveal shadow-2xl" style="transition-delay: 500ms;">
-                    <div class="h-56 overflow-hidden relative">
-                        <img src="/images/servico_escorpioes.png" alt="Controle de Escorpiões" class="w-full h-full object-cover card-img transition-transform duration-700">
-                        <div class="absolute inset-0 bg-gradient-to-t from-card via-transparent to-transparent opacity-60"></div>
-                    </div>
-                    <div class="p-8">
-                        <h4 class="text-2xl font-bold mb-3 text-white tracked-tight">Foco em Escorpiões</h4>
-                        <p class="text-slate-300 mb-6 text-sm leading-relaxed">Barreiras químicas de alta performance e manejo ambiental com rigor técnico absoluto.</p>
-                        <a href="https://wa.me/5511999999999" class="inline-flex items-center gap-2 text-accent font-bold group-hover:gap-4 transition-all uppercase text-xs tracking-widest border-b border-accent/30 pb-1">
-                            Solicitar Orçamento <i data-lucide="chevron-right" class="w-4 h-4"></i>
-                        </a>
+                <div class="group bg-card rounded-[2.5rem] overflow-hidden border border-white/5 service-card reveal shadow-2xl relative" style="transition-delay: 500ms;">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="/images/servico_escorpioes.png" alt="Controle de Escorpiões" class="w-full h-full object-cover card-img transition-transform duration-1000 group-hover:scale-110">
+                        <div class="absolute inset-x-0 bottom-0 p-8 glass-card">
+                            <h4 class="text-2xl font-bold text-white mb-2 tracking-tight">Escorpiões</h4>
+                            <p class="text-slate-300 text-sm leading-relaxed mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500 h-0 group-hover:h-auto overflow-hidden">Manejo higiênico e barreira química microencapsulada de alta aderência.</p>
+                            <a href="https://wa.me/5511999999999" class="inline-flex items-center gap-2 text-accent font-bold uppercase text-xs tracking-widest group/link transition-all">
+                                Orçamento <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover/link:translate-x-2"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
 
                 <!-- Service 6: Empresas -->
-                <div class="bg-card rounded-[2rem] overflow-hidden border border-white/10 service-card reveal shadow-2xl" style="transition-delay: 600ms;">
-                    <div class="h-56 overflow-hidden relative">
-                        <img src="/images/servico_corporativo.png" alt="Plano Corporativo" class="w-full h-full object-cover card-img transition-transform duration-700">
-                        <div class="absolute inset-0 bg-gradient-to-t from-card via-transparent to-transparent opacity-60"></div>
-                    </div>
-                    <div class="p-8">
-                        <h4 class="text-2xl font-bold mb-3 text-white tracked-tight">Plano Corporativo</h4>
-                        <p class="text-slate-300 mb-6 text-sm leading-relaxed">Manejo Integrado de Pragas (MIP) com documentação completa para órgãos sanitários.</p>
-                        <a href="https://wa.me/5511999999999" class="inline-flex items-center gap-2 text-accent font-bold group-hover:gap-4 transition-all uppercase text-xs tracking-widest border-b border-accent/30 pb-1">
-                            Solicitar Orçamento <i data-lucide="chevron-right" class="w-4 h-4"></i>
-                        </a>
+                <div class="group bg-card rounded-[2.5rem] overflow-hidden border border-white/5 service-card reveal shadow-2xl relative" style="transition-delay: 600ms;">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="/images/servico_corporativo.png" alt="Plano Corporativo" class="w-full h-full object-cover card-img transition-transform duration-1000 group-hover:scale-110">
+                        <div class="absolute inset-x-0 bottom-0 p-8 glass-card">
+                            <h4 class="text-2xl font-bold text-white mb-2 tracking-tight">PHE & Corporativo</h4>
+                            <p class="text-slate-300 text-sm leading-relaxed mb-4 opacity-0 group-hover:opacity-100 transition-opacity duration-500 h-0 group-hover:h-auto overflow-hidden">Manejo Integrado de Pragas (MIP) com documentação completa.</p>
+                            <a href="https://wa.me/5511999999999" class="inline-flex items-center gap-2 text-accent font-bold uppercase text-xs tracking-widest group/link transition-all">
+                                Orçamento <i data-lucide="arrow-right" class="w-4 h-4 transition-transform group-hover/link:translate-x-2"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -515,81 +526,60 @@ Design profissional e altamente conversivo via WhatsApp
                 <h3 class="text-4xl font-bold text-primary">Tudo o que Você Precisa Saber</h3>
             </div>
 
-            <div class="space-y-4" x-data="{ openFaq: null }">
+            <div class="grid md:grid-cols-1 gap-6" x-data="{ openFaq: null }">
                 <!-- Item 1 -->
-                <div class="bg-white rounded-2xl border border-slate-200 reveal">
-                    <button @click="openFaq = openFaq === 1 ? null : 1" class="w-full px-8 py-6 flex items-center justify-between text-left">
-                        <span class="font-bold text-lg text-primary">Quanto tempo dura o efeito da dedetização?</span>
-                        <i data-lucide="plus" class="text-accent transition-transform" :class="openFaq === 1 ? 'rotate-45' : ''"></i>
+                <div class="faq-card bg-white rounded-3xl reveal overflow-hidden">
+                    <button @click="openFaq = openFaq === 1 ? null : 1" class="w-full px-10 py-8 flex items-center justify-between text-left transition-all" :class="openFaq === 1 ? 'bg-slate-50' : ''">
+                        <span class="font-bold text-xl text-primary flex items-center gap-4">
+                            <span class="w-8 h-8 rounded-full bg-accent text-white flex items-center justify-center text-xs">P1</span>
+                            Quanto tempo dura o efeito da dedetização?
+                        </span>
+                        <i data-lucide="chevron-down" class="text-accent transition-transform duration-500" :class="openFaq === 1 ? 'rotate-180' : ''"></i>
                     </button>
-                    <div x-show="openFaq === 1" x-collapse class="px-8 pb-6 text-slate-600">
+                    <div x-show="openFaq === 1" x-collapse class="px-10 pb-8 text-slate-600 bg-slate-50 text-lg leading-relaxed border-t border-slate-100">
                         Geralmente, a garantia preventiva varia de 3 a 6 meses, dependendo do tipo de praga e das condições do ambiente. Fornecemos certificado comprovando a eficácia.
                     </div>
                 </div>
 
                 <!-- Item 2 -->
-                <div class="bg-white rounded-2xl border border-slate-200 reveal">
-                    <button @click="openFaq = openFaq === 2 ? null : 2" class="w-full px-8 py-6 flex items-center justify-between text-left">
-                        <span class="font-bold text-lg text-primary">Preciso sair de casa durante o serviço?</span>
-                        <i data-lucide="plus" class="text-accent transition-transform" :class="openFaq === 2 ? 'rotate-45' : ''"></i>
+                <div class="faq-card bg-white rounded-3xl reveal overflow-hidden">
+                    <button @click="openFaq = openFaq === 2 ? null : 2" class="w-full px-10 py-8 flex items-center justify-between text-left transition-all" :class="openFaq === 2 ? 'bg-slate-50' : ''">
+                        <span class="font-bold text-xl text-primary flex items-center gap-4">
+                            <span class="w-8 h-8 rounded-full bg-accent text-white flex items-center justify-center text-xs">P2</span>
+                            Preciso sair de casa durante o serviço?
+                        </span>
+                        <i data-lucide="chevron-down" class="text-accent transition-transform duration-500" :class="openFaq === 2 ? 'rotate-180' : ''"></i>
                     </button>
-                    <div x-show="openFaq === 2" x-collapse class="px-8 pb-6 text-slate-600">
+                    <div x-show="openFaq === 2" x-collapse class="px-10 pb-8 text-slate-600 bg-slate-50 text-lg leading-relaxed border-t border-slate-100">
                         Para a maioria dos tratamentos externos e em gel, não é necessário sair. Em pulverizações pesadas, recomendamos o afastamento de 2 a 4 horas para sua maior segurança e conforto.
                     </div>
                 </div>
 
                 <!-- Item 3 -->
-                <div class="bg-white rounded-2xl border border-slate-200 reveal">
-                    <button @click="openFaq = openFaq === 3 ? null : 3" class="w-full px-8 py-6 flex items-center justify-between text-left">
-                        <span class="font-bold text-lg text-primary">Os produtos são tóxicos para animais de estimação?</span>
-                        <i data-lucide="plus" class="text-accent transition-transform" :class="openFaq === 3 ? 'rotate-45' : ''"></i>
+                <div class="faq-card bg-white rounded-3xl reveal overflow-hidden">
+                    <button @click="openFaq = openFaq === 3 ? null : 3" class="w-full px-10 py-8 flex items-center justify-between text-left transition-all" :class="openFaq === 3 ? 'bg-slate-50' : ''">
+                        <span class="font-bold text-xl text-primary flex items-center gap-4">
+                            <span class="w-8 h-8 rounded-full bg-accent text-white flex items-center justify-center text-xs">P3</span>
+                            Os produtos são tóxicos para animais?
+                        </span>
+                        <i data-lucide="chevron-down" class="text-accent transition-transform duration-500" :class="openFaq === 3 ? 'rotate-180' : ''"></i>
                     </button>
-                    <div x-show="openFaq === 3" x-collapse class="px-8 pb-6 text-slate-600">
-                        Utilizamos produtos de baixa toxicidade (Domissanitários) registrados na Anvisa. Com a casa ventilada após o tempo de secagem, não há risco para cães ou gatos.
+                    <div x-show="openFaq === 3" x-collapse class="px-10 pb-8 text-slate-600 bg-slate-50 text-lg leading-relaxed border-t border-slate-100">
+                        Utilizamos produtos registrados na Anvisa ativos apenas para pragas-alvo. Com a secagem e ventilação adequada, o ambiente torna-se totalmente seguro para pets.
                     </div>
                 </div>
 
                 <!-- Item 4 -->
-                <div class="bg-white rounded-2xl border border-slate-200 reveal">
-                    <button @click="openFaq = openFaq === 4 ? null : 4" class="w-full px-8 py-6 flex items-center justify-between text-left">
-                        <span class="font-bold text-lg text-primary">O processo de dedetização deixa cheiro forte?</span>
-                        <i data-lucide="plus" class="text-accent transition-transform" :class="openFaq === 4 ? 'rotate-45' : ''"></i>
+                <div class="faq-card bg-white rounded-3xl reveal overflow-hidden">
+                    <button @click="openFaq = openFaq === 4 ? null : 4" class="w-full px-10 py-8 flex items-center justify-between text-left transition-all" :class="openFaq === 4 ? 'bg-slate-50' : ''">
+                        <span class="font-bold text-xl text-primary flex items-center gap-4">
+                            <span class="w-8 h-8 rounded-full bg-accent text-white flex items-center justify-center text-xs">P4</span>
+                            A dedetização deixa cheiro forte?
+                        </span>
+                        <i data-lucide="chevron-down" class="text-accent transition-transform duration-500" :class="openFaq === 4 ? 'rotate-180' : ''"></i>
                     </button>
-                    <div x-show="openFaq === 4" x-collapse class="px-8 pb-6 text-slate-600">
-                        Na maioria dos casos, não. Trabalhamos predominantemente com aplicações em gel, iscas ou soluções microencapsuladas e inodoras de última geração, garantindo conforto aos moradores no mesmo dia.
-                    </div>
-                </div>
-
-                <!-- Item 5 -->
-                <div class="bg-white rounded-2xl border border-slate-200 reveal">
-                    <button @click="openFaq = openFaq === 5 ? null : 5" class="w-full px-8 py-6 flex items-center justify-between text-left">
-                        <span class="font-bold text-lg text-primary">Vocês emitem Laudo e Certificado para empresas?</span>
-                        <i data-lucide="plus" class="text-accent transition-transform" :class="openFaq === 5 ? 'rotate-45' : ''"></i>
-                    </button>
-                    <div x-show="openFaq === 5" x-collapse class="px-8 pb-6 text-slate-600">
-                        Sim, fornecemos laudos técnicos e certificados válidos perante os órgãos de fiscalização sanitária para comércios, indústrias e condomínios que realizam nosso Plano de Manejo Integrado (MIP).
-                    </div>
-                </div>
-
-                <!-- Item 6 -->
-                <div class="bg-white rounded-2xl border border-slate-200 reveal">
-                    <button @click="openFaq = openFaq === 6 ? null : 6" class="w-full px-8 py-6 flex items-center justify-between text-left">
-                        <span class="font-bold text-lg text-primary">Como devo preparar a casa antes do técnico chegar?</span>
-                        <i data-lucide="plus" class="text-accent transition-transform" :class="openFaq === 6 ? 'rotate-45' : ''"></i>
-                    </button>
-                    <div x-show="openFaq === 6" x-collapse class="px-8 pb-6 text-slate-600">
-                        O processo é muito simples. Recomendamos apenas que guarde alimentos expostos e utensílios soltos das bancadas, e que deixe áreas de ralos e rodapés sempre livres para facilitar o acesso de nossa equipe.
-                    </div>
-                </div>
-
-                <!-- Item 7 -->
-                <div class="bg-white rounded-2xl border border-slate-200 reveal">
-                    <button @click="openFaq = openFaq === 7 ? null : 7" class="w-full px-8 py-6 flex items-center justify-between text-left">
-                        <span class="font-bold text-lg text-primary">Fazem serviços de urgência e finais de semana?</span>
-                        <i data-lucide="plus" class="text-accent transition-transform" :class="openFaq === 7 ? 'rotate-45' : ''"></i>
-                    </button>
-                    <div x-show="openFaq === 7" x-collapse class="px-8 pb-6 text-slate-600">
-                        Sim! Compreendemos que certas infestações precisam de urgência. Possuímos plantão via WhatsApp de Atendimento Rápido e temos flexibilidade para agendar horários que minimizem o impacto na sua rotina (inclusive finais de semana).
+                    <div x-show="openFaq === 4" x-collapse class="px-10 pb-8 text-slate-600 bg-slate-50 text-lg leading-relaxed border-t border-slate-100">
+                        Não. Trabalhamos com aplicações em gel e soluções microencapsuladas de última geração que são praticamente inodoras, garantindo seu conforto imediato.
                     </div>
                 </div>
             </div>
