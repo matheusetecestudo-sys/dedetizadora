@@ -23,6 +23,9 @@ Design profissional e altamente conversivo via WhatsApp
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="/images/servico_baratas.png">
     
+    <!-- Preload Hero Image -->
+    <link rel="preload" as="image" href="/images/hero-main.png" fetchpriority="high">
+    
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -66,9 +69,10 @@ Design profissional e altamente conversivo via WhatsApp
         [x-cloak] { display: none !important; }
         
         .glass-header {
-            background: rgba(15, 23, 42, 0.85);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
+            background: rgba(11, 17, 32, 0.7);
+            backdrop-filter: blur(16px) saturate(180%);
+            -webkit-backdrop-filter: blur(16px) saturate(180%);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         }
 
         .reveal {
@@ -173,17 +177,17 @@ Design profissional e altamente conversivo via WhatsApp
 <body class="bg-slate-50 text-slate-900 font-sans selection:bg-accent selection:text-white" x-data="{ mobileMenu: false, scrolled: false }" @scroll.window="scrolled = (window.pageYOffset > 50)">
 
     <!-- 1. Splash Screen -->
-    <div id="splash" class="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-primary transition-opacity duration-1000">
+    <div id="splash" class="fixed inset-0 z-[100] flex flex-col items-center justify-center bg-primary transition-opacity duration-700">
         <div class="mb-8 flex items-center gap-3 animate-pulse">
-            <div class="bg-accent p-3 rounded-xl shadow-lg shadow-accent/20">
+            <div class="bg-accent p-3 rounded-2xl shadow-lg shadow-accent/20">
                 <i data-lucide="shield-check" class="w-12 h-12 text-white"></i>
             </div>
-            <h1 class="text-4xl font-bold text-white tracking-tighter">DUNO<span class="text-accent">.</span></h1>
+            <h1 class="text-4xl font-bold text-white tracking-tighter italic">DUNO<span class="text-accent">!</span></h1>
         </div>
         <div class="w-64 h-1 bg-slate-800 rounded-full overflow-hidden">
-            <div id="progress" class="h-full bg-accent transition-all duration-[2000ms] w-0"></div>
+            <div id="progress" class="h-full bg-accent transition-all duration-[800ms] w-0 shadow-[0_0_15px_#10B981]"></div>
         </div>
-        <p class="mt-4 text-slate-400 text-sm font-light tracking-widest uppercase">Proteção Profissional em Andamento</p>
+        <p class="mt-4 text-slate-400 text-[10px] font-bold tracking-[0.3em] uppercase">Protocolo de Segurança Ativado</p>
     </div>
 
     <!-- 2. Sticky Header -->
@@ -237,12 +241,12 @@ Design profissional e altamente conversivo via WhatsApp
 
     <!-- 3. Hero Section -->
     <section id="inicio" class="relative min-h-[85vh] sm:min-h-screen flex items-center bg-primary overflow-hidden">
-        <!-- Background Image with Overlay -->
         <div class="absolute inset-0 z-0 bg-slate-900">
             <!-- Imagem premium com ajuste para mobile -->
-            <img src="/images/hero-main.png" alt="Dedetização Profissional DUNO" class="w-full h-full object-cover object-[75%_center] sm:object-center">
+            <img src="/images/hero-main.png" alt="Dedetização Profissional DUNO" fetchpriority="high" decoding="async" class="w-full h-full object-cover object-[75%_center] sm:object-center">
             <!-- Gradiente dinâmico para mobile vs desktop -->
-            <div class="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/40 to-transparent sm:bg-gradient-to-r sm:from-primary/95 sm:via-primary/60 sm:to-transparent"></div>
+            <div class="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/40 to-transparent sm:bg-gradient-to-r sm:from-primary/95 sm:via-primary/60 sm:via-40% sm:to-transparent"></div>
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_70%_20%,rgba(16,185,129,0.1),transparent_40%)]"></div>
         </div>
 
         <div class="container mx-auto px-6 relative z-10 pt-20">
@@ -255,12 +259,12 @@ Design profissional e altamente conversivo via WhatsApp
                     Atendimento 24h em Toda Região
                 </div>
                 
-                <h1 class="hero-title text-4xl sm:text-5xl md:text-7xl font-bold text-white leading-[1.1] tracking-tight mb-6 reveal" style="transition-delay: 200ms;">
-                    Sua Casa Livre de <span class="text-accent underline decoration-white/10 underline-offset-8">Pragas</span> HOJE<span class="text-accent">.</span>
+                <h1 class="hero-title text-4xl sm:text-5xl md:text-8xl font-black text-white leading-[1.05] tracking-tight mb-8 reveal" style="transition-delay: 200ms;">
+                    Sua Casa Livre de <br><span class="text-accent underline decoration-white/10 underline-offset-8">Pragas</span> HOJE<span class="text-accent">.</span>
                 </h1>
                 
-                <p class="hero-sub text-lg sm:text-xl text-slate-300 mb-10 leading-relaxed reveal" style="transition-delay: 400ms;">
-                    Proteção profissional contra insetos e escorpiões com <span class="text-white font-bold">resultado imediato</span>. Atendimento via WhatsApp agora em toda a região.
+                <p class="hero-sub text-lg sm:text-2xl text-slate-300 mb-12 leading-relaxed max-w-2xl reveal" style="transition-delay: 400ms;">
+                    Proteção de <span class="text-white font-bold">nível laboratorial</span> contra insetos e escorpiões. Blindagem imediata com tecnologia atóxica e garantia total.
                 </p>
 
                 <div class="flex flex-col sm:flex-row items-center gap-4 reveal" style="transition-delay: 600ms;">
@@ -297,8 +301,8 @@ Design profissional e altamente conversivo via WhatsApp
         <div class="container mx-auto px-6">
             <div class="grid lg:grid-cols-2 gap-16 items-center">
                 <div class="relative reveal">
-                    <div class="aspect-square rounded-3xl overflow-hidden shadow-2xl">
-                        <img src="/images/about-team.jpg" alt="Equipe DUNO" class="w-full h-full object-cover">
+                    <div class="aspect-square rounded-3xl overflow-hidden shadow-2xl border border-slate-100">
+                        <img src="/images/about-team.jpg" alt="Equipe DUNO" loading="lazy" class="w-full h-full object-cover">
                     </div>
                     <div class="absolute -bottom-10 -right-10 bg-primary p-10 rounded-3xl hidden md:block">
                         <div class="text-5xl font-bold text-accent mb-1">+15</div>
@@ -353,7 +357,7 @@ Design profissional e altamente conversivo via WhatsApp
                 <!-- Service 1: Baratas -->
                 <div class="group bg-card rounded-[2.5rem] overflow-hidden border border-white/5 service-card reveal shadow-2xl relative" style="transition-delay: 100ms;">
                     <div class="h-64 sm:h-72 overflow-hidden relative">
-                        <img src="/images/servico_baratas.png" alt="Dedetização de Baratas" class="w-full h-full object-cover card-img transition-transform duration-1000 group-hover:scale-110">
+                        <img src="/images/servico_baratas.png" alt="Dedetização de Baratas" loading="lazy" class="w-full h-full object-cover card-img transition-transform duration-1000 group-hover:scale-110">
                         <div class="absolute inset-0 bg-gradient-to-t from-card via-card/20 to-transparent"></div>
                     </div>
                     <div class="p-10">
@@ -372,7 +376,7 @@ Design profissional e altamente conversivo via WhatsApp
                 <!-- Service 2: Ratos -->
                 <div class="group bg-card rounded-[2.5rem] overflow-hidden border border-white/5 service-card reveal shadow-2xl relative" style="transition-delay: 200ms;">
                     <div class="h-64 sm:h-72 overflow-hidden relative">
-                        <img src="/images/servico_ratos.png" alt="Desratização" class="w-full h-full object-cover card-img transition-transform duration-1000 group-hover:scale-110">
+                        <img src="/images/servico_ratos.png" alt="Desratização" loading="lazy" class="w-full h-full object-cover card-img transition-transform duration-1000 group-hover:scale-110">
                         <div class="absolute inset-0 bg-gradient-to-t from-card via-card/20 to-transparent"></div>
                     </div>
                     <div class="p-10">
@@ -391,7 +395,7 @@ Design profissional e altamente conversivo via WhatsApp
                 <!-- Service 3: Cupins -->
                 <div class="group bg-card rounded-[2.5rem] overflow-hidden border border-white/5 service-card reveal shadow-2xl relative" style="transition-delay: 300ms;">
                     <div class="h-64 sm:h-72 overflow-hidden relative">
-                        <img src="/images/servico_cupins.png" alt="Descupinização" class="w-full h-full object-cover card-img transition-transform duration-1000 group-hover:scale-110">
+                        <img src="/images/servico_cupins.png" alt="Descupinização" loading="lazy" class="w-full h-full object-cover card-img transition-transform duration-1000 group-hover:scale-110">
                         <div class="absolute inset-0 bg-gradient-to-t from-card via-card/20 to-transparent"></div>
                     </div>
                     <div class="p-10">
@@ -410,7 +414,7 @@ Design profissional e altamente conversivo via WhatsApp
                 <!-- Service 4: Formigas -->
                 <div class="group bg-card rounded-[2.5rem] overflow-hidden border border-white/5 service-card reveal shadow-2xl relative" style="transition-delay: 100ms;">
                     <div class="h-64 sm:h-72 overflow-hidden relative">
-                        <img src="/images/servico_formigas.png" alt="Controle de Formigas" class="w-full h-full object-cover card-img transition-transform duration-1000 group-hover:scale-110">
+                        <img src="/images/servico_formigas.png" alt="Controle de Formigas" loading="lazy" class="w-full h-full object-cover card-img transition-transform duration-1000 group-hover:scale-110">
                         <div class="absolute inset-0 bg-gradient-to-t from-card via-card/20 to-transparent"></div>
                     </div>
                     <div class="p-10">
@@ -429,7 +433,7 @@ Design profissional e altamente conversivo via WhatsApp
                 <!-- Service 5: Escorpiões -->
                 <div class="group bg-card rounded-[2.5rem] overflow-hidden border border-white/5 service-card reveal shadow-2xl relative" style="transition-delay: 200ms;">
                     <div class="h-64 sm:h-72 overflow-hidden relative">
-                        <img src="/images/servico_escorpioes.png" alt="Manejo de Escorpiões" class="w-full h-full object-cover card-img transition-transform duration-1000 group-hover:scale-110">
+                        <img src="/images/servico_escorpioes.png" alt="Manejo de Escorpiões" loading="lazy" class="w-full h-full object-cover card-img transition-transform duration-1000 group-hover:scale-110">
                         <div class="absolute inset-0 bg-gradient-to-t from-card via-card/20 to-transparent"></div>
                     </div>
                     <div class="p-10">
@@ -448,7 +452,7 @@ Design profissional e altamente conversivo via WhatsApp
                 <!-- Service 6: Pulgas e Carrapatos -->
                 <div class="group bg-card rounded-[2.5rem] overflow-hidden border border-white/5 service-card reveal shadow-2xl relative" style="transition-delay: 300ms;">
                     <div class="h-64 sm:h-72 overflow-hidden relative">
-                        <img src="/images/servico_pulgas_carrapatos.png" alt="Controle de Pulgas" class="w-full h-full object-cover card-img transition-transform duration-1000 group-hover:scale-110">
+                        <img src="/images/servico_pulgas_carrapatos.png" alt="Controle de Pulgas" loading="lazy" class="w-full h-full object-cover card-img transition-transform duration-1000 group-hover:scale-110">
                         <div class="absolute inset-0 bg-gradient-to-t from-card via-card/20 to-transparent"></div>
                     </div>
                     <div class="p-10">
@@ -467,7 +471,7 @@ Design profissional e altamente conversivo via WhatsApp
                 <!-- Service 7: Pombos -->
                 <div class="group bg-card rounded-[2.5rem] overflow-hidden border border-white/5 service-card reveal shadow-2xl relative" style="transition-delay: 100ms;">
                     <div class="h-64 sm:h-72 overflow-hidden relative">
-                        <img src="/images/servico_pombos.png" alt="Controle de Pombos" class="w-full h-full object-cover card-img transition-transform duration-1000 group-hover:scale-110">
+                        <img src="/images/servico_pombos.png" alt="Controle de Pombos" loading="lazy" class="w-full h-full object-cover card-img transition-transform duration-1000 group-hover:scale-110">
                         <div class="absolute inset-0 bg-gradient-to-t from-card via-card/20 to-transparent"></div>
                     </div>
                     <div class="p-10">
@@ -486,7 +490,7 @@ Design profissional e altamente conversivo via WhatsApp
                 <!-- Service 8: Caixa d'água -->
                 <div class="group bg-card rounded-[2.5rem] overflow-hidden border border-white/5 service-card reveal shadow-2xl relative" style="transition-delay: 200ms;">
                     <div class="h-64 sm:h-72 overflow-hidden relative">
-                        <img src="/images/servico_caixa_agua.png" alt="Limpeza de Caixa d'água" class="w-full h-full object-cover card-img transition-transform duration-1000 group-hover:scale-110">
+                        <img src="/images/servico_caixa_agua.png" alt="Limpeza de Caixa d'água" loading="lazy" class="w-full h-full object-cover card-img transition-transform duration-1000 group-hover:scale-110">
                         <div class="absolute inset-0 bg-gradient-to-t from-card via-card/20 to-transparent"></div>
                     </div>
                     <div class="p-10">
@@ -505,7 +509,7 @@ Design profissional e altamente conversivo via WhatsApp
                 <!-- Service 9: Sanitização -->
                 <div class="group bg-card rounded-[2.5rem] overflow-hidden border border-white/5 service-card reveal shadow-2xl relative" style="transition-delay: 300ms;">
                     <div class="h-64 sm:h-72 overflow-hidden relative">
-                        <img src="/images/servico_sanitizacao.png" alt="Sanitização de Ambientes" class="w-full h-full object-cover card-img transition-transform duration-1000 group-hover:scale-110">
+                        <img src="/images/servico_sanitizacao.png" alt="Sanitização de Ambientes" loading="lazy" class="w-full h-full object-cover card-img transition-transform duration-1000 group-hover:scale-110">
                         <div class="absolute inset-0 bg-gradient-to-t from-card via-card/20 to-transparent"></div>
                     </div>
                     <div class="p-10">
@@ -596,13 +600,13 @@ Design profissional e altamente conversivo via WhatsApp
         <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-accent/5 rounded-full blur-[100px] -ml-64 -mb-64"></div>
 
         <div class="container mx-auto px-6 relative z-10">
-            <div class="flex flex-col lg:flex-row items-end justify-between mb-20 gap-8 reveal">
+            <div class="flex flex-col lg:flex-row items-end justify-between mb-28 gap-8 reveal">
                 <div class="max-w-2xl">
-                    <div class="flex items-center gap-3 text-accent font-bold uppercase text-xs tracking-[0.3em] mb-6">
-                        <span class="w-10 h-[2px] bg-accent"></span> Experiência DUNO
+                    <div class="inline-flex items-center gap-3 text-accent font-bold uppercase text-[10px] tracking-[0.4em] mb-8 bg-accent/5 px-4 py-2 rounded-full border border-accent/10">
+                        <span class="w-2 h-2 rounded-full bg-accent animate-ping"></span> Experiência DUNO Elite
                     </div>
-                    <h2 class="text-5xl lg:text-7xl font-black text-primary leading-tight tracking-tighter">
-                        O que nossos <br> <span class="text-accent underline decoration-primary/5 underline-offset-8">clientes</span> dizem.
+                    <h2 class="text-5xl lg:text-8xl font-black text-primary leading-[0.9] tracking-tighter">
+                        O que nossos <br> <span class="text-accent underline decoration-primary/5 underline-offset-8">parceiros</span> dizem.
                     </h2>
                 </div>
                 <div class="bg-white p-6 rounded-3xl shadow-xl flex items-center gap-6 border border-slate-100 mb-4">
@@ -901,8 +905,8 @@ Design profissional e altamente conversivo via WhatsApp
             
             setTimeout(() => {
                 splash.style.opacity = '0';
-                setTimeout(() => splash.remove(), 1000);
-            }, 2000);
+                setTimeout(() => splash.remove(), 700);
+            }, 1000);
         });
 
         // Intersection Observer para Animações de Scroll Profissionais (Fade + Slide)
