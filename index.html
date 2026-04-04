@@ -88,10 +88,13 @@ Design profissional e altamente conversivo via WhatsApp
 
         .service-card {
             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            flex-direction: column;
         }
         .service-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px -10px rgba(16, 185, 129, 0.15);
+            transform: translateY(-12px);
+            box-shadow: 0 40px 80px -15px rgba(16, 185, 129, 0.2);
+            border-color: rgba(16, 185, 129, 0.3);
         }
         .service-card:hover .service-icon {
             transform: scale(1.1) rotate(5deg);
@@ -360,14 +363,17 @@ Design profissional e altamente conversivo via WhatsApp
                         <img src="/images/servico_baratas.png" alt="Dedetização de Baratas" loading="lazy" class="w-full h-full object-cover card-img transition-transform duration-1000 group-hover:scale-110">
                         <div class="absolute inset-0 bg-gradient-to-t from-card via-card/20 to-transparent"></div>
                     </div>
-                    <div class="p-10">
-                        <h4 class="text-2xl font-bold text-white mb-4 tracking-tight">Dedetização de Baratas</h4>
-                        <ul class="space-y-3 mb-8 text-slate-400 text-sm">
+                    <div class="p-10 flex flex-col flex-grow">
+                        <div class="flex justify-between items-start mb-4">
+                            <h4 class="text-2xl font-bold text-white tracking-tight">Dedetização de Baratas</h4>
+                            <span class="bg-accent/10 text-accent text-[10px] font-bold px-2 py-1 rounded-md uppercase tracking-wider border border-accent/20">Residencial</span>
+                        </div>
+                        <ul class="space-y-3 mb-8 text-slate-400 text-sm flex-grow">
                             <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i> Gel atrativo de alta palatabilidade</li>
                             <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i> Pulverização microencapsulada sem cheiro</li>
                             <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i> Proteção prolongada em ralos e frestas</li>
                         </ul>
-                        <a href="https://wa.me/5511992876219" class="w-full py-4 bg-white/5 hover:bg-accent text-white hover:text-white border border-white/10 rounded-xl font-bold text-sm transition-all flex items-center justify-center gap-2">
+                        <a href="https://wa.me/5511992876219" class="w-full py-4 bg-white/5 hover:bg-accent text-white hover:text-white border border-white/10 rounded-xl font-bold text-sm transition-all flex items-center justify-center gap-2 mt-auto group-hover:shadow-[0_0_20px_rgba(16,185,129,0.3)]">
                              Solicitar Orçamento
                         </a>
                     </div>
@@ -379,14 +385,17 @@ Design profissional e altamente conversivo via WhatsApp
                         <img src="/images/servico_ratos.png" alt="Desratização" loading="lazy" class="w-full h-full object-cover card-img transition-transform duration-1000 group-hover:scale-110">
                         <div class="absolute inset-0 bg-gradient-to-t from-card via-card/20 to-transparent"></div>
                     </div>
-                    <div class="p-10">
-                        <h4 class="text-2xl font-bold text-white mb-4 tracking-tight">Desratização Técnica</h4>
-                        <ul class="space-y-3 mb-8 text-slate-400 text-sm">
+                    <div class="p-10 flex flex-col flex-grow">
+                        <div class="flex justify-between items-start mb-4">
+                            <h4 class="text-2xl font-bold text-white tracking-tight">Desratização Técnica</h4>
+                            <span class="bg-blue-500/10 text-blue-400 text-[10px] font-bold px-2 py-1 rounded-md uppercase tracking-wider border border-blue-500/20">Urgente</span>
+                        </div>
+                        <ul class="space-y-3 mb-8 text-slate-400 text-sm flex-grow">
                             <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i> Iscas parafinadas resistentes à umidade</li>
                             <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i> Porta-iscas lacrados (seguro para pets)</li>
                             <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i> Mapeamento de pontos críticos de invasão</li>
                         </ul>
-                        <a href="https://wa.me/5511992876219" class="w-full py-4 bg-white/5 hover:bg-accent text-white hover:text-white border border-white/10 rounded-xl font-bold text-sm transition-all flex items-center justify-center gap-2">
+                        <a href="https://wa.me/5511992876219" class="w-full py-4 bg-white/5 hover:bg-accent text-white hover:text-white border border-white/10 rounded-xl font-bold text-sm transition-all flex items-center justify-center gap-2 mt-auto group-hover:shadow-[0_0_20px_rgba(16,185,129,0.3)]">
                              Solicitar Orçamento
                         </a>
                     </div>
@@ -398,14 +407,17 @@ Design profissional e altamente conversivo via WhatsApp
                         <img src="/images/servico_cupins.png" alt="Descupinização" loading="lazy" class="w-full h-full object-cover card-img transition-transform duration-1000 group-hover:scale-110">
                         <div class="absolute inset-0 bg-gradient-to-t from-card via-card/20 to-transparent"></div>
                     </div>
-                    <div class="p-10">
-                        <h4 class="text-2xl font-bold text-white mb-4 tracking-tight">Descupinização</h4>
-                        <ul class="space-y-3 mb-8 text-slate-400 text-sm">
+                    <div class="p-10 flex flex-col flex-grow">
+                        <div class="flex justify-between items-start mb-4">
+                            <h4 class="text-2xl font-bold text-white tracking-tight">Descupinização</h4>
+                            <span class="bg-amber-500/10 text-amber-400 text-[10px] font-bold px-2 py-1 rounded-md uppercase tracking-wider border border-amber-500/20">Patrimônio</span>
+                        </div>
+                        <ul class="space-y-3 mb-8 text-slate-400 text-sm flex-grow">
                             <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i> Injeção pressurizada em madeiramentos</li>
                             <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i> Barreira química em solos e alicerces</li>
                             <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i> Garantia estendida com laudo técnico</li>
                         </ul>
-                        <a href="https://wa.me/5511992876219" class="w-full py-4 bg-white/5 hover:bg-accent text-white hover:text-white border border-white/10 rounded-xl font-bold text-sm transition-all flex items-center justify-center gap-2">
+                        <a href="https://wa.me/5511992876219" class="w-full py-4 bg-white/5 hover:bg-accent text-white hover:text-white border border-white/10 rounded-xl font-bold text-sm transition-all flex items-center justify-center gap-2 mt-auto group-hover:shadow-[0_0_20px_rgba(16,185,129,0.3)]">
                              Solicitar Orçamento
                         </a>
                     </div>
@@ -417,14 +429,17 @@ Design profissional e altamente conversivo via WhatsApp
                         <img src="/images/servico_formigas.png" alt="Controle de Formigas" loading="lazy" class="w-full h-full object-cover card-img transition-transform duration-1000 group-hover:scale-110">
                         <div class="absolute inset-0 bg-gradient-to-t from-card via-card/20 to-transparent"></div>
                     </div>
-                    <div class="p-10">
-                        <h4 class="text-2xl font-bold text-white mb-4 tracking-tight">Controle de Formigas</h4>
-                        <ul class="space-y-3 mb-8 text-slate-400 text-sm">
+                    <div class="p-10 flex flex-col flex-grow">
+                        <div class="flex justify-between items-start mb-4">
+                            <h4 class="text-2xl font-bold text-white tracking-tight">Controle de Formigas</h4>
+                            <span class="bg-accent/10 text-accent text-[10px] font-bold px-2 py-1 rounded-md uppercase tracking-wider border border-accent/20">Saúde</span>
+                        </div>
+                        <ul class="space-y-3 mb-8 text-slate-400 text-sm flex-grow">
                             <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i> Aplicação de gel focal em pontos estratégicos</li>
                             <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i> Erradicação completa do formigueiro interno</li>
                             <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i> Produto sem odor e seguro para cozinhas</li>
                         </ul>
-                        <a href="https://wa.me/5511992876219" class="w-full py-4 bg-white/5 hover:bg-accent text-white hover:text-white border border-white/10 rounded-xl font-bold text-sm transition-all flex items-center justify-center gap-2">
+                        <a href="https://wa.me/5511992876219" class="w-full py-4 bg-white/5 hover:bg-accent text-white hover:text-white border border-white/10 rounded-xl font-bold text-sm transition-all flex items-center justify-center gap-2 mt-auto group-hover:shadow-[0_0_20px_rgba(16,185,129,0.3)]">
                              Solicitar Orçamento
                         </a>
                     </div>
@@ -436,14 +451,17 @@ Design profissional e altamente conversivo via WhatsApp
                         <img src="/images/servico_escorpioes.png" alt="Manejo de Escorpiões" loading="lazy" class="w-full h-full object-cover card-img transition-transform duration-1000 group-hover:scale-110">
                         <div class="absolute inset-0 bg-gradient-to-t from-card via-card/20 to-transparent"></div>
                     </div>
-                    <div class="p-10">
-                        <h4 class="text-2xl font-bold text-white mb-4 tracking-tight">Manejo de Escorpiões</h4>
-                        <ul class="space-y-3 mb-8 text-slate-400 text-sm">
+                    <div class="p-10 flex flex-col flex-grow">
+                        <div class="flex justify-between items-start mb-4">
+                            <h4 class="text-2xl font-bold text-white tracking-tight">Manejo de Escorpiões</h4>
+                            <span class="bg-red-500/10 text-red-400 text-[10px] font-bold px-2 py-1 rounded-md uppercase tracking-wider border border-red-500/20">Máxima Alerta</span>
+                        </div>
+                        <ul class="space-y-3 mb-8 text-slate-400 text-sm flex-grow">
                             <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i> Barreira química de contato residual</li>
                             <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i> Manejo ambiental e vedação de acessos</li>
                             <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i> Captura e higienização de caixas de esgoto</li>
                         </ul>
-                        <a href="https://wa.me/5511992876219" class="w-full py-4 bg-white/5 hover:bg-accent text-white hover:text-white border border-white/10 rounded-xl font-bold text-sm transition-all flex items-center justify-center gap-2">
+                        <a href="https://wa.me/5511992876219" class="w-full py-4 bg-white/5 hover:bg-accent text-white hover:text-white border border-white/10 rounded-xl font-bold text-sm transition-all flex items-center justify-center gap-2 mt-auto group-hover:shadow-[0_0_20px_rgba(16,185,129,0.3)]">
                              Solicitar Orçamento
                         </a>
                     </div>
@@ -455,14 +473,17 @@ Design profissional e altamente conversivo via WhatsApp
                         <img src="/images/servico_pulgas_carrapatos.png" alt="Controle de Pulgas" loading="lazy" class="w-full h-full object-cover card-img transition-transform duration-1000 group-hover:scale-110">
                         <div class="absolute inset-0 bg-gradient-to-t from-card via-card/20 to-transparent"></div>
                     </div>
-                    <div class="p-10">
-                        <h4 class="text-2xl font-bold text-white mb-4 tracking-tight">Pulgas e Carrapatos</h4>
-                        <ul class="space-y-3 mb-8 text-slate-400 text-sm">
+                    <div class="p-10 flex flex-col flex-grow">
+                        <div class="flex justify-between items-start mb-4">
+                            <h4 class="text-2xl font-bold text-white tracking-tight">Pulgas e Carrapatos</h4>
+                            <span class="bg-purple-500/10 text-purple-400 text-[10px] font-bold px-2 py-1 rounded-md uppercase tracking-wider border border-purple-500/20">Pet-Safe</span>
+                        </div>
+                        <ul class="space-y-3 mb-8 text-slate-400 text-sm flex-grow">
                             <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i> Tratamento em jardins e áreas pets</li>
                             <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i> Termonebulização para áreas internas</li>
                             <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i> Quebra do ciclo biológico dos parasitas</li>
                         </ul>
-                        <a href="https://wa.me/5511992876219" class="w-full py-4 bg-white/5 hover:bg-accent text-white hover:text-white border border-white/10 rounded-xl font-bold text-sm transition-all flex items-center justify-center gap-2">
+                        <a href="https://wa.me/5511992876219" class="w-full py-4 bg-white/5 hover:bg-accent text-white hover:text-white border border-white/10 rounded-xl font-bold text-sm transition-all flex items-center justify-center gap-2 mt-auto group-hover:shadow-[0_0_20px_rgba(16,185,129,0.3)]">
                              Solicitar Orçamento
                         </a>
                     </div>
@@ -474,14 +495,17 @@ Design profissional e altamente conversivo via WhatsApp
                         <img src="/images/servico_pombos.png" alt="Controle de Pombos" loading="lazy" class="w-full h-full object-cover card-img transition-transform duration-1000 group-hover:scale-110">
                         <div class="absolute inset-0 bg-gradient-to-t from-card via-card/20 to-transparent"></div>
                     </div>
-                    <div class="p-10">
-                        <h4 class="text-2xl font-bold text-white mb-4 tracking-tight">Controle de Pombos</h4>
-                        <ul class="space-y-3 mb-8 text-slate-400 text-sm">
+                    <div class="p-10 flex flex-col flex-grow">
+                        <div class="flex justify-between items-start mb-4">
+                            <h4 class="text-2xl font-bold text-white tracking-tight">Controle de Pombos</h4>
+                            <span class="bg-indigo-500/10 text-indigo-400 text-[10px] font-bold px-2 py-1 rounded-md uppercase tracking-wider border border-indigo-500/20">Edificação</span>
+                        </div>
+                        <ul class="space-y-3 mb-8 text-slate-400 text-sm flex-grow">
                             <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i> Barreiras físicas (Espículas e Redes)</li>
                             <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i> Higienização contra fungos e bactérias</li>
                             <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i> Repelentes químicos atóxicos e eficazes</li>
                         </ul>
-                        <a href="https://wa.me/5511992876219" class="w-full py-4 bg-white/5 hover:bg-accent text-white hover:text-white border border-white/10 rounded-xl font-bold text-sm transition-all flex items-center justify-center gap-2">
+                        <a href="https://wa.me/5511992876219" class="w-full py-4 bg-white/5 hover:bg-accent text-white hover:text-white border border-white/10 rounded-xl font-bold text-sm transition-all flex items-center justify-center gap-2 mt-auto group-hover:shadow-[0_0_20px_rgba(16,185,129,0.3)]">
                              Solicitar Orçamento
                         </a>
                     </div>
@@ -493,14 +517,17 @@ Design profissional e altamente conversivo via WhatsApp
                         <img src="/images/servico_caixa_agua.png" alt="Limpeza de Caixa d'água" loading="lazy" class="w-full h-full object-cover card-img transition-transform duration-1000 group-hover:scale-110">
                         <div class="absolute inset-0 bg-gradient-to-t from-card via-card/20 to-transparent"></div>
                     </div>
-                    <div class="p-10">
-                        <h4 class="text-2xl font-bold text-white mb-4 tracking-tight">Limpeza de Reservatórios</h4>
-                        <ul class="space-y-3 mb-8 text-slate-400 text-sm">
+                    <div class="p-10 flex flex-col flex-grow">
+                        <div class="flex justify-between items-start mb-4">
+                            <h4 class="text-2xl font-bold text-white tracking-tight">Limpeza de Reservas</h4>
+                            <span class="bg-cyan-500/10 text-cyan-400 text-[10px] font-bold px-2 py-1 rounded-md uppercase tracking-wider border border-cyan-500/20">Higiene</span>
+                        </div>
+                        <ul class="space-y-3 mb-8 text-slate-400 text-sm flex-grow">
                             <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i> Desinfecção bacteriológica completa</li>
                             <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i> Laudo de potabilidade e certificação</li>
                             <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i> Atendimento residencial e industrial</li>
                         </ul>
-                        <a href="https://wa.me/5511992876219" class="w-full py-4 bg-white/5 hover:bg-accent text-white hover:text-white border border-white/10 rounded-xl font-bold text-sm transition-all flex items-center justify-center gap-2">
+                        <a href="https://wa.me/5511992876219" class="w-full py-4 bg-white/5 hover:bg-accent text-white hover:text-white border border-white/10 rounded-xl font-bold text-sm transition-all flex items-center justify-center gap-2 mt-auto group-hover:shadow-[0_0_20px_rgba(16,185,129,0.3)]">
                              Solicitar Orçamento
                         </a>
                     </div>
@@ -512,14 +539,17 @@ Design profissional e altamente conversivo via WhatsApp
                         <img src="/images/servico_sanitizacao.png" alt="Sanitização de Ambientes" loading="lazy" class="w-full h-full object-cover card-img transition-transform duration-1000 group-hover:scale-110">
                         <div class="absolute inset-0 bg-gradient-to-t from-card via-card/20 to-transparent"></div>
                     </div>
-                    <div class="p-10">
-                        <h4 class="text-2xl font-bold text-white mb-4 tracking-tight">Sanitização Vírus/Bact.</h4>
-                        <ul class="space-y-3 mb-8 text-slate-400 text-sm">
+                    <div class="p-10 flex flex-col flex-grow">
+                        <div class="flex justify-between items-start mb-4">
+                            <h4 class="text-2xl font-bold text-white tracking-tight">Sanitização Vírus/Bact.</h4>
+                            <span class="bg-emerald-500/10 text-emerald-400 text-[10px] font-bold px-2 py-1 rounded-md uppercase tracking-wider border border-emerald-500/20">Proteção</span>
+                        </div>
+                        <ul class="space-y-3 mb-8 text-slate-400 text-sm flex-grow">
                             <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i> Nebulização de alto espectro biológico</li>
                             <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i> Eliminação de mofo, ácaros e odores</li>
                             <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i> Ideal para escolas, clínicas e escritórios</li>
                         </ul>
-                        <a href="https://wa.me/5511992876219" class="w-full py-4 bg-white/5 hover:bg-accent text-white hover:text-white border border-white/10 rounded-xl font-bold text-sm transition-all flex items-center justify-center gap-2">
+                        <a href="https://wa.me/5511992876219" class="w-full py-4 bg-white/5 hover:bg-accent text-white hover:text-white border border-white/10 rounded-xl font-bold text-sm transition-all flex items-center justify-center gap-2 mt-auto group-hover:shadow-[0_0_20px_rgba(16,185,129,0.3)]">
                              Solicitar Orçamento
                         </a>
                     </div>
