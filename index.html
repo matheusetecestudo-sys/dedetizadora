@@ -1,0 +1,1105 @@
+<!--
+TEMPLATE WHITE-LABEL – DUNO DEDETIZADORA | Versão Premium 10/10
+Design profissional e altamente conversivo via WhatsApp
+-->
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DUNO Dedetizadora | Controle Profissional de Pragas</title>
+    
+    <!-- SEO & Metadata -->
+    <meta name="description" content="Proteção rápida e eficaz contra pragas urbanas. Dedetização, Descupinização e Desratização com garantia e certificado Anvisa. Solicite orçamento hoje!">
+    <meta name="keywords" content="dedetizadora, controle de pragas, dedetização sp, descupinização, desratização, dunodetetizadora">
+    <link rel="canonical" href="https://dunodetetizadora.com.br">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="DUNO Dedetizadora | Solução em Controle de Pragas">
+    <meta property="og:description" content="Controle profissional de pragas urbanas 24h. Segurança, rapidez e garantia certificada pela Anvisa.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="/images/hero-main.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/images/servico_baratas.png">
+    
+    <!-- Preload Hero Image -->
+    <link rel="preload" as="image" href="/images/hero-main.png" fetchpriority="high">
+    
+    <!-- Fonts: display=swap para não bloquear renderização -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS & Alpine.js -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0B1120',
+                        accent: '#10B981',
+                        secondary: '#1E293B',
+                        card: '#161E2E'
+                    },
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                    },
+                    animation: {
+                        'float': 'float 3s ease-in-out infinite',
+                    },
+                    keyframes: {
+                        float: {
+                            '0%, 100%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-10px)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        [x-cloak] { display: none !important; }
+        
+        * { box-sizing: border-box; }
+
+        body { font-family: 'Outfit', sans-serif; }
+
+        .glass-header {
+            background: rgba(11, 17, 32, 0.85);
+            backdrop-filter: blur(16px) saturate(180%);
+            -webkit-backdrop-filter: blur(16px) saturate(180%);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+        }
+
+        /* ===== SCROLL REVEAL ANIMATIONS ===== */
+        .reveal {
+            opacity: 0;
+            transform: translateY(32px);
+            transition: opacity 0.7s cubic-bezier(0.2, 1, 0.3, 1),
+                        transform 0.7s cubic-bezier(0.2, 1, 0.3, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .reveal-left {
+            opacity: 0;
+            transform: translateX(-40px);
+            transition: opacity 0.7s cubic-bezier(0.2, 1, 0.3, 1),
+                        transform 0.7s cubic-bezier(0.2, 1, 0.3, 1);
+        }
+        .reveal-left.active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        .reveal-right {
+            opacity: 0;
+            transform: translateX(40px);
+            transition: opacity 0.7s cubic-bezier(0.2, 1, 0.3, 1),
+                        transform 0.7s cubic-bezier(0.2, 1, 0.3, 1);
+        }
+        .reveal-right.active {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        .reveal-scale {
+            opacity: 0;
+            transform: scale(0.92);
+            transition: opacity 0.7s cubic-bezier(0.2, 1, 0.3, 1),
+                        transform 0.7s cubic-bezier(0.2, 1, 0.3, 1);
+        }
+        .reveal-scale.active {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        /* ===== SERVICE CARDS ===== */
+        .service-card {
+            transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            flex-direction: column;
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 32px 64px -12px rgba(16, 185, 129, 0.25);
+            border-color: rgba(16, 185, 129, 0.4) !important;
+        }
+        .service-card:hover .card-img {
+            transform: scale(1.07);
+        }
+
+        /* ===== CTA BUTTONS (green + arrow) ===== */
+        .btn-cta {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            background-color: #10B981;
+            color: #fff;
+            font-weight: 700;
+            border-radius: 0.75rem;
+            padding: 1rem 1.5rem;
+            font-size: 0.9rem;
+            transition: background-color 0.25s, transform 0.2s, box-shadow 0.25s;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            width: 100%;
+            box-shadow: 0 4px 20px rgba(16,185,129,0.25);
+        }
+        .btn-cta:hover {
+            background-color: #059669;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(16,185,129,0.4);
+        }
+        .btn-cta svg.arrow-icon {
+            width: 1.1rem;
+            height: 1.1rem;
+            transition: transform 0.2s;
+            flex-shrink: 0;
+        }
+        .btn-cta:hover svg.arrow-icon {
+            transform: translateX(4px);
+        }
+
+        /* ===== WHATSAPP PULSE (floating) ===== */
+        .whatsapp-pulse {
+            box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+            animation: pulse-whatsapp 2s infinite;
+        }
+        @keyframes pulse-whatsapp {
+            0%   { box-shadow: 0 0 0 0 rgba(37,211,102,0.7); }
+            70%  { box-shadow: 0 0 0 18px rgba(37,211,102,0); }
+            100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); }
+        }
+
+        /* ===== SCROLLBAR ===== */
+        ::-webkit-scrollbar { width: 7px; }
+        ::-webkit-scrollbar-track { background: #0f172a; }
+        ::-webkit-scrollbar-thumb { background: #10b981; border-radius: 4px; }
+
+        /* ===== FAQ CARD ===== */
+        .faq-card { transition: all 0.3s ease; }
+        .faq-card:hover {
+            box-shadow: 0 20px 50px -10px rgba(0,0,0,0.08);
+            transform: translateY(-4px);
+            border-color: #10B981 !important;
+        }
+
+        /* ===== FOOTER LINKS ===== */
+        .footer-link {
+            position: relative;
+            transition: color 0.3s;
+        }
+        .footer-link::after {
+            content: '';
+            position: absolute;
+            width: 0; height: 1px;
+            bottom: -2px; left: 0;
+            background-color: #10B981;
+            transition: width 0.3s;
+        }
+        .footer-link:hover::after { width: 100%; }
+
+        /* ===== TRUST BADGES (hero) ===== */
+        .trust-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.25rem;
+            margin-top: 2.5rem;
+        }
+        .trust-badge {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: rgba(255,255,255,0.85);
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+
+        /* ===== STATS GRID ===== */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .stat-item { text-align: center; }
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 900;
+            color: #0B1120;
+            line-height: 1;
+        }
+        .stat-label {
+            font-size: 0.85rem;
+            color: #64748b;
+            margin-top: 0.25rem;
+        }
+
+        /* ===== MOBILE ===== */
+        @media (max-width: 640px) {
+            .hero-title { font-size: 2.6rem !important; line-height: 1.12 !important; }
+            .hero-sub  { font-size: 1rem !important; }
+        }
+
+        /* ===== SECTION DIVIDERS ===== */
+        .section-wave {
+            position: absolute;
+            bottom: -1px;
+            left: 0; right: 0;
+            height: 60px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 font-sans" x-data="{ mobileMenu: false, scrolled: false }" @scroll.window="scrolled = (window.pageYOffset > 50)">
+
+    <!-- ═══════════════════════════════════════
+         2. STICKY HEADER
+    ═══════════════════════════════════════ -->
+    <header :class="scrolled ? 'glass-header py-3' : 'bg-transparent py-5'" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
+        <div class="container mx-auto px-6 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-2 group">
+                <div class="bg-accent p-1.5 rounded-lg group-hover:rotate-12 transition-transform">
+                    <i data-lucide="shield" class="w-6 h-6 text-white"></i>
+                </div>
+                <span class="text-2xl font-bold tracking-tighter text-white">DUNO</span>
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden lg:flex items-center gap-8">
+                <a href="#" class="text-sm font-medium text-slate-300 hover:text-accent transition-colors">Início</a>
+                <a href="#sobre" class="text-sm font-medium text-slate-300 hover:text-accent transition-colors">Sobre</a>
+                <a href="#servicos" class="text-sm font-medium text-slate-300 hover:text-accent transition-colors">Serviços</a>
+                <a href="#feedback" class="text-sm font-medium text-slate-300 hover:text-accent transition-colors">Depoimentos</a>
+                <a href="#faq" class="text-sm font-medium text-slate-300 hover:text-accent transition-colors">Dúvidas</a>
+                <a href="#contato" class="text-sm font-medium text-slate-300 hover:text-accent transition-colors">Contato</a>
+            </nav>
+
+            <!-- CTA Desktop + Hamburger -->
+            <div class="flex items-center gap-4">
+                <a href="https://wa.me/5511992876219" target="_blank" class="hidden sm:flex items-center gap-2 bg-accent hover:bg-emerald-600 text-white px-5 py-2.5 rounded-full text-sm font-bold transition-all shadow-lg shadow-accent/20">
+                    <svg aria-hidden="true" style="width:1.1rem;height:1.1rem;fill:white;flex-shrink:0" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    WhatsApp
+                </a>
+                <!-- Hamburger: usa id único para acessibilidade -->
+                <button id="btn-mobile-menu" @click="mobileMenu = !mobileMenu" aria-label="Abrir menu" class="lg:hidden p-2 text-white bg-white/10 rounded-lg hover:bg-white/20 transition-colors">
+                    <svg x-show="!mobileMenu" xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                    <svg x-show="mobileMenu" x-cloak xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div x-show="mobileMenu" x-cloak
+             x-transition:enter="transition ease-out duration-200"
+             x-transition:enter-start="opacity-0 -translate-y-2"
+             x-transition:enter-end="opacity-100 translate-y-0"
+             x-transition:leave="transition ease-in duration-150"
+             x-transition:leave-start="opacity-100 translate-y-0"
+             x-transition:leave-end="opacity-0 -translate-y-2"
+             class="lg:hidden absolute top-full left-0 right-0 bg-primary/98 backdrop-blur-xl border-t border-white/10 py-6 px-6">
+            <nav class="flex flex-col gap-4">
+                <a @click="mobileMenu = false" href="#"         class="text-base text-white font-semibold text-center py-2 hover:text-accent transition-colors">Início</a>
+                <a @click="mobileMenu = false" href="#sobre"    class="text-base text-white font-semibold text-center py-2 hover:text-accent transition-colors">Sobre Nós</a>
+                <a @click="mobileMenu = false" href="#servicos" class="text-base text-white font-semibold text-center py-2 hover:text-accent transition-colors">Serviços</a>
+                <a @click="mobileMenu = false" href="#feedback" class="text-base text-white font-semibold text-center py-2 hover:text-accent transition-colors">Depoimentos</a>
+                <a @click="mobileMenu = false" href="#faq"      class="text-base text-white font-semibold text-center py-2 hover:text-accent transition-colors">Dúvidas</a>
+                <a @click="mobileMenu = false" href="#contato"  class="text-base text-white font-semibold text-center py-2 hover:text-accent transition-colors">Contato</a>
+                <a href="https://wa.me/5511992876219" target="_blank" class="mt-2 bg-accent text-white py-4 rounded-xl text-center font-bold flex items-center justify-center gap-2 hover:bg-emerald-600 transition-colors">
+                    <svg aria-hidden="true" style="width:1.1rem;height:1.1rem;fill:white;flex-shrink:0" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    Solicitar Orçamento
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ═══════════════════════════════════════
+         3. HERO SECTION
+    ═══════════════════════════════════════ -->
+    <section id="inicio" class="relative min-h-[90vh] sm:min-h-screen flex items-center bg-primary overflow-hidden">
+        <div class="absolute inset-0 z-0 bg-slate-900">
+            <img src="/images/hero-main.png" alt="Dedetização Profissional DUNO" fetchpriority="high" decoding="async" class="w-full h-full object-cover object-[70%_center] sm:object-center" width="1600" height="900">
+            <div class="absolute inset-0 bg-gradient-to-t from-primary/95 via-primary/50 to-primary/20 sm:bg-gradient-to-r sm:from-primary/95 sm:via-primary/65 sm:to-transparent"></div>
+            <div class="absolute inset-0 bg-[radial-gradient(circle_at_70%_20%,rgba(16,185,129,0.08),transparent_40%)]"></div>
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10 pt-24 pb-16">
+            <div class="max-w-2xl">
+                <div class="inline-flex items-center gap-2 bg-accent/10 border border-accent/25 text-accent px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest mb-6 reveal">
+                    <span class="relative flex h-2 w-2">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-accent"></span>
+                    </span>
+                    Atendimento 24h em Toda Região
+                </div>
+                
+                <h1 class="hero-title text-4xl sm:text-6xl md:text-7xl font-black text-white leading-[1.05] tracking-tight mb-6 reveal" style="transition-delay:150ms">
+                    Sua Casa Livre de<br><span class="text-accent">Pragas</span> HOJE<span class="text-accent">.</span>
+                </h1>
+                
+                <p class="hero-sub text-lg sm:text-xl text-slate-300 mb-10 leading-relaxed max-w-xl reveal" style="transition-delay:300ms">
+                    Proteção de <span class="text-white font-bold">nível laboratorial</span> contra insetos e escorpiões. Blindagem imediata com tecnologia atóxica e garantia total.
+                </p>
+
+                <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 reveal" style="transition-delay:450ms">
+                    <a href="https://wa.me/5511992876219" target="_blank" class="btn-cta sm:w-auto px-8 py-4 rounded-2xl text-base shadow-2xl shadow-accent/30">
+                        <span>Chamar Especialista</span>
+                        <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                    <a href="#servicos" class="sm:w-auto px-8 py-4 bg-white/10 hover:bg-white/20 text-white border border-white/15 backdrop-blur-md rounded-2xl font-bold flex items-center justify-center transition-all text-center text-base">
+                        Nossos Serviços
+                    </a>
+                </div>
+
+                <!-- Trust Badges -->
+                <div class="trust-badges reveal" style="transition-delay:600ms">
+                    <div class="trust-badge">
+                        <i data-lucide="shield-check" class="w-5 h-5 text-accent shrink-0"></i>
+                        <span>Garantia Certificada</span>
+                    </div>
+                    <div class="trust-badge">
+                        <i data-lucide="award" class="w-5 h-5 text-accent shrink-0"></i>
+                        <span>Certificado Anvisa</span>
+                    </div>
+                    <div class="trust-badge">
+                        <i data-lucide="leaf" class="w-5 h-5 text-accent shrink-0"></i>
+                        <span>Eco-friendly</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         4. SOBRE SECTION
+    ═══════════════════════════════════════ -->
+    <section id="sobre" class="py-24 bg-white relative overflow-hidden">
+        <div class="container mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="relative reveal-left">
+                    <div class="aspect-square rounded-3xl overflow-hidden shadow-2xl border border-slate-100">
+                        <img src="/images/about-team.jpg" alt="Equipe DUNO" loading="lazy" decoding="async" class="w-full h-full object-cover" width="600" height="600">
+                    </div>
+                    <div class="absolute -bottom-8 -right-8 bg-primary p-8 rounded-3xl hidden md:block shadow-xl">
+                        <div class="text-4xl font-bold text-accent mb-1">+15</div>
+                        <div class="text-slate-400 font-medium text-sm">Anos de Experiência<br>Ininterruptos</div>
+                    </div>
+                </div>
+                
+                <div class="reveal-right" style="transition-delay:150ms">
+                    <h2 class="text-accent font-bold tracking-widest uppercase text-xs mb-4">Sobre a DUNO Dedetizadora</h2>
+                    <h3 class="text-3xl md:text-4xl font-bold text-primary mb-6 leading-tight">Liderança Tecnológica em Controle de Pragas.</h3>
+                    <p class="text-slate-600 text-base leading-relaxed mb-5">
+                        Na DUNO, não apenas aplicamos produtos. Nós realizamos uma blindagem científica no seu ambiente. Solicite seu orçamento via WhatsApp e receba suporte técnico imediato.
+                    </p>
+                    <p class="text-slate-600 text-base leading-relaxed mb-10">
+                        Nossa equipe está pronta para te atender 24h por dia, oferecendo a segurança que sua família merece com produtos inodoros e atóxicos para pets.
+                    </p>
+                    
+                    <!-- Stats 2x2 -->
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <div class="stat-number counter" data-target="2500">0</div>
+                            <div class="stat-label">Clientes Satisfeitos</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number counter" data-target="15">0</div>
+                            <div class="stat-label">Cidades Atendidas</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number counter" data-target="100">0</div>
+                            <div class="stat-label">% Sucesso</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number counter" data-target="24">0</div>
+                            <div class="stat-label">H de Plantão</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         5. SERVIÇOS GRID
+    ═══════════════════════════════════════ -->
+    <section id="servicos" class="py-24 bg-[#0d1526] text-white relative overflow-hidden">
+        <!-- Decoração sutil de fundo -->
+        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[700px] h-[300px] bg-accent/5 rounded-full blur-[120px] pointer-events-none"></div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center max-w-2xl mx-auto mb-16 reveal">
+                <h2 class="text-accent font-bold tracking-widest uppercase text-xs mb-4">Nossas Especialidades</h2>
+                <h3 class="text-3xl md:text-4xl font-bold mb-4">Soluções Completas e de Alta Precisão.</h3>
+                <p class="text-slate-400 text-sm">Eliminamos desde insetos rasteiros até pragas urbanas complexas, sempre com laudo técnico e garantia por escrito.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Service 1: Baratas -->
+                <div class="group bg-[#1a2540] rounded-3xl overflow-hidden border border-white/8 service-card reveal shadow-xl" style="transition-delay:80ms">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="/images/servico_baratas.png" alt="Dedetização de Baratas" loading="lazy" decoding="async" class="w-full h-full object-cover card-img transition-transform duration-700" width="600" height="400">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#1a2540] via-transparent to-transparent"></div>
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <div class="flex justify-between items-start mb-3">
+                            <h4 class="text-xl font-bold text-white">Dedetização de Baratas</h4>
+                            <span class="bg-accent/15 text-accent text-[10px] font-bold px-2 py-1 rounded-md uppercase tracking-wider border border-accent/20 shrink-0 ml-2">Residencial</span>
+                        </div>
+                        <ul class="space-y-2 mb-7 text-slate-400 text-sm flex-grow">
+                            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i> Gel atrativo de alta palatabilidade</li>
+                            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i> Pulverização microencapsulada sem cheiro</li>
+                            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i> Proteção prolongada em ralos e frestas</li>
+                        </ul>
+                        <a href="https://wa.me/5511992876219" target="_blank" class="btn-cta mt-auto">
+                            Solicitar Orçamento
+                            <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 2: Ratos -->
+                <div class="group bg-[#1a2540] rounded-3xl overflow-hidden border border-white/8 service-card reveal shadow-xl" style="transition-delay:160ms">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="/images/servico_ratos.png" alt="Desratização" loading="lazy" decoding="async" class="w-full h-full object-cover card-img transition-transform duration-700" width="600" height="400">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#1a2540] via-transparent to-transparent"></div>
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <div class="flex justify-between items-start mb-3">
+                            <h4 class="text-xl font-bold text-white">Desratização Técnica</h4>
+                            <span class="bg-blue-500/15 text-blue-400 text-[10px] font-bold px-2 py-1 rounded-md uppercase tracking-wider border border-blue-500/20 shrink-0 ml-2">Urgente</span>
+                        </div>
+                        <ul class="space-y-2 mb-7 text-slate-400 text-sm flex-grow">
+                            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i> Iscas parafinadas resistentes à umidade</li>
+                            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i> Porta-iscas lacrados (seguro para pets)</li>
+                            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i> Mapeamento de pontos críticos de invasão</li>
+                        </ul>
+                        <a href="https://wa.me/5511992876219" target="_blank" class="btn-cta mt-auto">
+                            Solicitar Orçamento
+                            <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 3: Cupins -->
+                <div class="group bg-[#1a2540] rounded-3xl overflow-hidden border border-white/8 service-card reveal shadow-xl" style="transition-delay:240ms">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="/images/servico_cupins.png" alt="Descupinização" loading="lazy" decoding="async" class="w-full h-full object-cover card-img transition-transform duration-700" width="600" height="400">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#1a2540] via-transparent to-transparent"></div>
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <div class="flex justify-between items-start mb-3">
+                            <h4 class="text-xl font-bold text-white">Descupinização</h4>
+                            <span class="bg-amber-500/15 text-amber-400 text-[10px] font-bold px-2 py-1 rounded-md uppercase tracking-wider border border-amber-500/20 shrink-0 ml-2">Patrimônio</span>
+                        </div>
+                        <ul class="space-y-2 mb-7 text-slate-400 text-sm flex-grow">
+                            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i> Injeção pressurizada em madeiramentos</li>
+                            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i> Barreira química em solos e alicerces</li>
+                            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i> Garantia estendida com laudo técnico</li>
+                        </ul>
+                        <a href="https://wa.me/5511992876219" target="_blank" class="btn-cta mt-auto">
+                            Solicitar Orçamento
+                            <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 4: Formigas -->
+                <div class="group bg-[#1a2540] rounded-3xl overflow-hidden border border-white/8 service-card reveal shadow-xl" style="transition-delay:320ms">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="/images/servico_formigas.png" alt="Controle de Formigas" loading="lazy" decoding="async" class="w-full h-full object-cover card-img transition-transform duration-700" width="600" height="400">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#1a2540] via-transparent to-transparent"></div>
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <div class="flex justify-between items-start mb-3">
+                            <h4 class="text-xl font-bold text-white">Controle de Formigas</h4>
+                            <span class="bg-accent/15 text-accent text-[10px] font-bold px-2 py-1 rounded-md uppercase tracking-wider border border-accent/20 shrink-0 ml-2">Saúde</span>
+                        </div>
+                        <ul class="space-y-2 mb-7 text-slate-400 text-sm flex-grow">
+                            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i> Aplicação de gel focal em pontos estratégicos</li>
+                            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i> Erradicação completa do formigueiro interno</li>
+                            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i> Produto sem odor e seguro para cozinhas</li>
+                        </ul>
+                        <a href="https://wa.me/5511992876219" target="_blank" class="btn-cta mt-auto">
+                            Solicitar Orçamento
+                            <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 5: Escorpiões -->
+                <div class="group bg-[#1a2540] rounded-3xl overflow-hidden border border-white/8 service-card reveal shadow-xl" style="transition-delay:400ms">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="/images/servico_escorpioes.png" alt="Manejo de Escorpiões" loading="lazy" decoding="async" class="w-full h-full object-cover card-img transition-transform duration-700" width="600" height="400">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#1a2540] via-transparent to-transparent"></div>
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <div class="flex justify-between items-start mb-3">
+                            <h4 class="text-xl font-bold text-white">Manejo de Escorpiões</h4>
+                            <span class="bg-red-500/15 text-red-400 text-[10px] font-bold px-2 py-1 rounded-md uppercase tracking-wider border border-red-500/20 shrink-0 ml-2">Urgente</span>
+                        </div>
+                        <ul class="space-y-2 mb-7 text-slate-400 text-sm flex-grow">
+                            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i> Barreira química de contato residual</li>
+                            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i> Manejo ambiental e vedação de acessos</li>
+                            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i> Captura e higienização de caixas de esgoto</li>
+                        </ul>
+                        <a href="https://wa.me/5511992876219" target="_blank" class="btn-cta mt-auto">
+                            Solicitar Orçamento
+                            <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 6: Pulgas e Carrapatos -->
+                <div class="group bg-[#1a2540] rounded-3xl overflow-hidden border border-white/8 service-card reveal shadow-xl" style="transition-delay:480ms">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="/images/servico_pulgas_carrapatos.png" alt="Controle de Pulgas" loading="lazy" decoding="async" class="w-full h-full object-cover card-img transition-transform duration-700" width="600" height="400">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#1a2540] via-transparent to-transparent"></div>
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <div class="flex justify-between items-start mb-3">
+                            <h4 class="text-xl font-bold text-white">Pulgas e Carrapatos</h4>
+                            <span class="bg-purple-500/15 text-purple-400 text-[10px] font-bold px-2 py-1 rounded-md uppercase tracking-wider border border-purple-500/20 shrink-0 ml-2">Pet-Safe</span>
+                        </div>
+                        <ul class="space-y-2 mb-7 text-slate-400 text-sm flex-grow">
+                            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i> Tratamento em jardins e áreas pets</li>
+                            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i> Termonebulização para áreas internas</li>
+                            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i> Quebra do ciclo biológico dos parasitas</li>
+                        </ul>
+                        <a href="https://wa.me/5511992876219" target="_blank" class="btn-cta mt-auto">
+                            Solicitar Orçamento
+                            <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 7: Pombos -->
+                <div class="group bg-[#1a2540] rounded-3xl overflow-hidden border border-white/8 service-card reveal shadow-xl" style="transition-delay:560ms">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="/images/servico_pombos.png" alt="Controle de Pombos" loading="lazy" decoding="async" class="w-full h-full object-cover card-img transition-transform duration-700" width="600" height="400">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#1a2540] via-transparent to-transparent"></div>
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <div class="flex justify-between items-start mb-3">
+                            <h4 class="text-xl font-bold text-white">Controle de Pombos</h4>
+                            <span class="bg-indigo-500/15 text-indigo-400 text-[10px] font-bold px-2 py-1 rounded-md uppercase tracking-wider border border-indigo-500/20 shrink-0 ml-2">Edificação</span>
+                        </div>
+                        <ul class="space-y-2 mb-7 text-slate-400 text-sm flex-grow">
+                            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i> Barreiras físicas (Espículas e Redes)</li>
+                            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i> Higienização contra fungos e bactérias</li>
+                            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i> Repelentes químicos atóxicos e eficazes</li>
+                        </ul>
+                        <a href="https://wa.me/5511992876219" target="_blank" class="btn-cta mt-auto">
+                            Solicitar Orçamento
+                            <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 8: Caixa d'água -->
+                <div class="group bg-[#1a2540] rounded-3xl overflow-hidden border border-white/8 service-card reveal shadow-xl" style="transition-delay:640ms">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="/images/servico_caixa_agua.png" alt="Limpeza de Caixa d'água" loading="lazy" decoding="async" class="w-full h-full object-cover card-img transition-transform duration-700" width="600" height="400">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#1a2540] via-transparent to-transparent"></div>
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <div class="flex justify-between items-start mb-3">
+                            <h4 class="text-xl font-bold text-white">Limpeza de Reservas</h4>
+                            <span class="bg-cyan-500/15 text-cyan-400 text-[10px] font-bold px-2 py-1 rounded-md uppercase tracking-wider border border-cyan-500/20 shrink-0 ml-2">Higiene</span>
+                        </div>
+                        <ul class="space-y-2 mb-7 text-slate-400 text-sm flex-grow">
+                            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i> Desinfecção bacteriológica completa</li>
+                            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i> Laudo de potabilidade e certificação</li>
+                            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i> Atendimento residencial e industrial</li>
+                        </ul>
+                        <a href="https://wa.me/5511992876219" target="_blank" class="btn-cta mt-auto">
+                            Solicitar Orçamento
+                            <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Service 9: Sanitização -->
+                <div class="group bg-[#1a2540] rounded-3xl overflow-hidden border border-white/8 service-card reveal shadow-xl" style="transition-delay:720ms">
+                    <div class="h-56 overflow-hidden relative">
+                        <img src="/images/servico_sanitizacao.png" alt="Sanitização de Ambientes" loading="lazy" decoding="async" class="w-full h-full object-cover card-img transition-transform duration-700" width="600" height="400">
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#1a2540] via-transparent to-transparent"></div>
+                    </div>
+                    <div class="p-8 flex flex-col flex-grow">
+                        <div class="flex justify-between items-start mb-3">
+                            <h4 class="text-xl font-bold text-white">Sanitização Vírus/Bact.</h4>
+                            <span class="bg-emerald-500/15 text-emerald-400 text-[10px] font-bold px-2 py-1 rounded-md uppercase tracking-wider border border-emerald-500/20 shrink-0 ml-2">Proteção</span>
+                        </div>
+                        <ul class="space-y-2 mb-7 text-slate-400 text-sm flex-grow">
+                            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i> Nebulização de alto espectro biológico</li>
+                            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i> Eliminação de mofo, ácaros e odores</li>
+                            <li class="flex items-start gap-2"><i data-lucide="check" class="w-4 h-4 text-accent shrink-0 mt-0.5"></i> Ideal para escolas, clínicas e escritórios</li>
+                        </ul>
+                        <a href="https://wa.me/5511992876219" target="_blank" class="btn-cta mt-auto">
+                            Solicitar Orçamento
+                            <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-14 text-center reveal" style="transition-delay:800ms">
+                <a href="https://wa.me/5511992876219" target="_blank" class="btn-cta inline-flex w-auto px-12 py-4 rounded-2xl text-base shadow-2xl shadow-accent/30">
+                    <span>Peça Orçamento Grátis</span>
+                    <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         6. COMO FUNCIONA (Timeline)
+    ═══════════════════════════════════════ -->
+    <section id="como-funciona" class="py-24 bg-primary text-white overflow-hidden">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-accent font-bold tracking-widest uppercase text-xs mb-4">Metodologia DUNO</h2>
+                <h3 class="text-3xl md:text-4xl font-bold">Processo Simples e Transparente</h3>
+            </div>
+
+            <div class="relative max-w-5xl mx-auto">
+                <div class="hidden lg:block absolute top-[2.5rem] left-0 w-full h-0.5 bg-white/8"></div>
+                
+                <div class="grid grid-cols-1 lg:grid-cols-5 gap-10 relative">
+                    <div class="text-center reveal" style="transition-delay:80ms">
+                        <div class="w-16 h-16 bg-accent rounded-2xl flex items-center justify-center mx-auto mb-6 relative z-10 shadow-lg shadow-accent/25">
+                            <i data-lucide="message-square" class="w-8 h-8 text-white"></i>
+                        </div>
+                        <h5 class="text-lg font-bold mb-2">1. Contato</h5>
+                        <p class="text-slate-400 text-sm">Fale conosco via WhatsApp ou telefone.</p>
+                    </div>
+                    <div class="text-center reveal" style="transition-delay:160ms">
+                        <div class="w-16 h-16 bg-accent rounded-2xl flex items-center justify-center mx-auto mb-6 relative z-10 shadow-lg shadow-accent/25">
+                            <i data-lucide="search" class="w-8 h-8 text-white"></i>
+                        </div>
+                        <h5 class="text-lg font-bold mb-2">2. Análise</h5>
+                        <p class="text-slate-400 text-sm">Avaliamos o nível e o tipo de infestação.</p>
+                    </div>
+                    <div class="text-center reveal" style="transition-delay:240ms">
+                        <div class="w-16 h-16 bg-accent rounded-2xl flex items-center justify-center mx-auto mb-6 relative z-10 shadow-lg shadow-accent/25">
+                            <i data-lucide="file-text" class="w-8 h-8 text-white"></i>
+                        </div>
+                        <h5 class="text-lg font-bold mb-2">3. Orçamento</h5>
+                        <p class="text-slate-400 text-sm">Enviamos a proposta personalizada.</p>
+                    </div>
+                    <div class="text-center reveal" style="transition-delay:320ms">
+                        <div class="w-16 h-16 bg-accent rounded-2xl flex items-center justify-center mx-auto mb-6 relative z-10 shadow-lg shadow-accent/25">
+                            <i data-lucide="zap" class="w-8 h-8 text-white"></i>
+                        </div>
+                        <h5 class="text-lg font-bold mb-2">4. Execução</h5>
+                        <p class="text-slate-400 text-sm">Aplicação técnica com data marcada.</p>
+                    </div>
+                    <div class="text-center reveal" style="transition-delay:400ms">
+                        <div class="w-16 h-16 bg-accent rounded-2xl flex items-center justify-center mx-auto mb-6 relative z-10 shadow-lg shadow-accent/25">
+                            <i data-lucide="shield-check" class="w-8 h-8 text-white"></i>
+                        </div>
+                        <h5 class="text-lg font-bold mb-2">5. Garantia</h5>
+                        <p class="text-slate-400 text-sm">Certificado de validade e suporte.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         7. DEPOIMENTOS
+    ═══════════════════════════════════════ -->
+    <section id="feedback" class="py-28 bg-slate-50 relative overflow-hidden">
+        <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-accent/5 rounded-full blur-[100px] -mr-64 -mt-64 pointer-events-none"></div>
+        <div class="absolute bottom-0 left-0 w-[500px] h-[500px] bg-accent/5 rounded-full blur-[100px] -ml-64 -mb-64 pointer-events-none"></div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="flex flex-col lg:flex-row items-end justify-between mb-20 gap-8 reveal">
+                <div class="max-w-2xl">
+                    <div class="inline-flex items-center gap-3 text-accent font-bold uppercase text-[10px] tracking-[0.4em] mb-6 bg-accent/5 px-4 py-2 rounded-full border border-accent/10">
+                        <span class="w-2 h-2 rounded-full bg-accent animate-ping"></span> Experiência DUNO Elite
+                    </div>
+                    <h2 class="text-4xl lg:text-6xl font-black text-primary leading-[0.95] tracking-tighter">
+                        O que nossos <br><span class="text-accent">parceiros</span> dizem.
+                    </h2>
+                </div>
+                <div class="bg-white p-5 rounded-2xl shadow-lg flex items-center gap-5 border border-slate-100">
+                    <div class="flex -space-x-3">
+                        <img class="w-11 h-11 rounded-full border-4 border-white shadow-md" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=100&auto=format&fit=crop" alt="" loading="lazy">
+                        <img class="w-11 h-11 rounded-full border-4 border-white shadow-md" src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=100&auto=format&fit=crop" alt="" loading="lazy">
+                        <img class="w-11 h-11 rounded-full border-4 border-white shadow-md" src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=100&auto=format&fit=crop" alt="" loading="lazy">
+                    </div>
+                    <div class="text-sm">
+                        <div class="flex text-amber-400 gap-0.5 mb-1">
+                            <i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i><i data-lucide="star" class="w-4 h-4 fill-current"></i>
+                        </div>
+                        <p class="text-primary font-bold">4.9/5 de Aprovação Real</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-white p-10 rounded-[2.5rem] shadow-sm border border-slate-100 relative group hover:shadow-2xl hover:shadow-emerald-500/10 transition-all duration-500 reveal" style="transition-delay:80ms">
+                    <div class="absolute top-8 right-8 text-7xl font-serif text-accent opacity-5 group-hover:opacity-15 transition-opacity">"</div>
+                    <div class="flex text-amber-500 gap-1 mb-6">
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                    </div>
+                    <p class="text-slate-600 text-lg leading-relaxed mb-10 font-medium italic">
+                        Serviço <span class="text-primary font-bold not-italic">impecável</span>. Tive um problema sério com cupins e a equipe da DUNO resolveu tudo de forma rápida e silenciosa. O certificado da Anvisa me deu muita segurança.
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <div class="relative">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop" alt="Ricardo Silveira" loading="lazy" class="w-14 h-14 rounded-full object-cover border-2 border-accent/20">
+                            <div class="absolute -right-1 -bottom-1 bg-accent text-white p-1 rounded-full border-2 border-white">
+                                <i data-lucide="check" class="w-3 h-3"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <h6 class="font-bold text-primary text-lg tracking-tight">Ricardo Silveira</h6>
+                            <p class="text-slate-400 text-xs font-semibold uppercase tracking-widest">Condomínio Prime</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 (Destaque) -->
+                <div class="bg-primary p-10 rounded-[2.5rem] shadow-2xl relative group transform lg:-translate-y-6 transition-all duration-500 reveal" style="transition-delay:160ms">
+                    <div class="absolute top-8 right-8 text-7xl font-serif text-accent opacity-10 group-hover:opacity-25 transition-opacity">"</div>
+                    <div class="flex text-accent gap-1 mb-6">
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                    </div>
+                    <p class="text-slate-200 text-lg leading-relaxed mb-10 font-medium italic">
+                        Contratei o plano mensal para meu restaurante. <span class="text-white font-bold not-italic border-b-2 border-accent/30">Nunca mais vi uma barata.</span> São profissionais, pontuais e o cheiro do produto é quase imperceptível. Recomendo demais!
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <div class="relative">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=200&auto=format&fit=crop" alt="Mariana Lopes" loading="lazy" class="w-14 h-14 rounded-full object-cover border-2 border-accent">
+                            <div class="absolute -right-1 -bottom-1 bg-accent text-white p-1 rounded-full border-2 border-primary">
+                                <i data-lucide="check" class="w-3 h-3"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <h6 class="font-bold text-white text-lg tracking-tight">Mariana Lopes</h6>
+                            <p class="text-slate-400 text-xs font-semibold uppercase tracking-widest">CEO Gastronomia</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white p-10 rounded-[2.5rem] shadow-sm border border-slate-100 relative group hover:shadow-2xl hover:shadow-emerald-500/10 transition-all duration-500 reveal" style="transition-delay:240ms">
+                    <div class="absolute top-8 right-8 text-7xl font-serif text-accent opacity-5 group-hover:opacity-15 transition-opacity">"</div>
+                    <div class="flex text-amber-500 gap-1 mb-6">
+                        <i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i><i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                    </div>
+                    <p class="text-slate-600 text-lg leading-relaxed mb-10 font-medium italic">
+                        Excelente atendimento. Resolvemos o problema com escorpiões no jardim em uma única visita. O técnico foi <span class="text-primary font-bold not-italic underline decoration-accent/20 underline-offset-4">espetacular</span> e muito didático.
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <div class="relative">
+                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=200&auto=format&fit=crop" alt="André Costa" loading="lazy" class="w-14 h-14 rounded-full object-cover border-2 border-accent/20">
+                            <div class="absolute -right-1 -bottom-1 bg-accent text-white p-1 rounded-full border-2 border-white">
+                                <i data-lucide="check" class="w-3 h-3"></i>
+                            </div>
+                        </div>
+                        <div>
+                            <h6 class="font-bold text-primary text-lg tracking-tight">André Costa</h6>
+                            <p class="text-slate-400 text-xs font-semibold uppercase tracking-widest">Diretor de Logística</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         8. FAQ ACCORDION
+    ═══════════════════════════════════════ -->
+    <section id="faq" class="py-24 bg-slate-50">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <div class="text-center mb-14 reveal">
+                <h2 class="text-accent font-bold tracking-widest uppercase text-xs mb-4">Dúvidas Frequentes</h2>
+                <h3 class="text-3xl md:text-4xl font-bold text-primary">Tudo o que Você Precisa Saber</h3>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-6" x-data="{ openFaq: null }">
+                <div class="faq-card bg-white rounded-[1.5rem] reveal overflow-hidden border border-slate-100" style="transition-delay:80ms">
+                    <button @click="openFaq = openFaq === 1 ? null : 1" class="w-full px-7 py-6 flex items-center justify-between text-left transition-all" :class="openFaq === 1 ? 'bg-slate-50' : ''">
+                        <span class="font-bold text-base text-primary flex items-center gap-3">
+                            <div class="w-9 h-9 rounded-xl bg-accent/10 text-accent flex items-center justify-center shrink-0">
+                                <i data-lucide="timer" class="w-4 h-4"></i>
+                            </div>
+                            Tempo de efeito?
+                        </span>
+                        <i data-lucide="plus" class="text-accent transition-transform duration-300 shrink-0 ml-2" :class="openFaq === 1 ? 'rotate-45' : ''"></i>
+                    </button>
+                    <div x-show="openFaq === 1" x-collapse class="px-7 pb-6 text-slate-600 bg-slate-50 leading-relaxed border-t border-slate-100/50 text-sm">
+                        A proteção preventiva dura de 3 a 6 meses. O certificado da DUNO garante a eficácia real durante todo o período.
+                    </div>
+                </div>
+
+                <div class="faq-card bg-white rounded-[1.5rem] reveal overflow-hidden border border-slate-100" style="transition-delay:160ms">
+                    <button @click="openFaq = openFaq === 2 ? null : 2" class="w-full px-7 py-6 flex items-center justify-between text-left transition-all" :class="openFaq === 2 ? 'bg-slate-50' : ''">
+                        <span class="font-bold text-base text-primary flex items-center gap-3">
+                            <div class="w-9 h-9 rounded-xl bg-accent/10 text-accent flex items-center justify-center shrink-0">
+                                <i data-lucide="home" class="w-4 h-4"></i>
+                            </div>
+                            Sair de casa?
+                        </span>
+                        <i data-lucide="plus" class="text-accent transition-transform duration-300 shrink-0 ml-2" :class="openFaq === 2 ? 'rotate-45' : ''"></i>
+                    </button>
+                    <div x-show="openFaq === 2" x-collapse class="px-7 pb-6 text-slate-600 bg-slate-50 leading-relaxed border-t border-slate-100/50 text-sm">
+                        Geralmente não. Iscas e gel permitem rotina normal. Pulverizações pedem apenas 2 a 4 horas de afastamento.
+                    </div>
+                </div>
+
+                <div class="faq-card bg-white rounded-[1.5rem] reveal overflow-hidden border border-slate-100" style="transition-delay:240ms">
+                    <button @click="openFaq = openFaq === 3 ? null : 3" class="w-full px-7 py-6 flex items-center justify-between text-left transition-all" :class="openFaq === 3 ? 'bg-slate-50' : ''">
+                        <span class="font-bold text-base text-primary flex items-center gap-3">
+                            <div class="w-9 h-9 rounded-xl bg-accent/10 text-accent flex items-center justify-center shrink-0">
+                                <i data-lucide="dog" class="w-4 h-4"></i>
+                            </div>
+                            Seguro para pets?
+                        </span>
+                        <i data-lucide="plus" class="text-accent transition-transform duration-300 shrink-0 ml-2" :class="openFaq === 3 ? 'rotate-45' : ''"></i>
+                    </button>
+                    <div x-show="openFaq === 3" x-collapse class="px-7 pb-6 text-slate-600 bg-slate-50 leading-relaxed border-t border-slate-100/50 text-sm">
+                        Sim. Produtos domissanitários registrados na Anvisa, seguros para mamíferos após o período de secagem.
+                    </div>
+                </div>
+
+                <div class="faq-card bg-white rounded-[1.5rem] reveal overflow-hidden border border-slate-100" style="transition-delay:320ms">
+                    <button @click="openFaq = openFaq === 4 ? null : 4" class="w-full px-7 py-6 flex items-center justify-between text-left transition-all" :class="openFaq === 4 ? 'bg-slate-50' : ''">
+                        <span class="font-bold text-base text-primary flex items-center gap-3">
+                            <div class="w-9 h-9 rounded-xl bg-accent/10 text-accent flex items-center justify-center shrink-0">
+                                <i data-lucide="wind" class="w-4 h-4"></i>
+                            </div>
+                            Deixa cheiro?
+                        </span>
+                        <i data-lucide="plus" class="text-accent transition-transform duration-300 shrink-0 ml-2" :class="openFaq === 4 ? 'rotate-45' : ''"></i>
+                    </button>
+                    <div x-show="openFaq === 4" x-collapse class="px-7 pb-6 text-slate-600 bg-slate-50 leading-relaxed border-t border-slate-100/50 text-sm">
+                        Inodoro. Nossas tecnologias microencapsuladas não liberam odores e não mancham superfícies.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         9. CONTATO & MAPA
+    ═══════════════════════════════════════ -->
+    <section id="contato" class="py-24 bg-white">
+        <div class="container mx-auto px-6 reveal">
+            <div class="bg-primary rounded-[2.5rem] overflow-hidden shadow-2xl flex flex-col lg:flex-row">
+                <div class="lg:w-1/2 p-12 md:p-16">
+                    <h3 class="text-3xl font-bold text-white mb-8">Fale com um Técnico Agora.</h3>
+                    <div class="space-y-6 mb-10">
+                        <div class="flex items-center gap-4">
+                            <div class="w-11 h-11 bg-accent/20 rounded-xl flex items-center justify-center text-accent shrink-0">
+                                <i data-lucide="phone" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h6 class="text-white font-bold text-sm">Telefone 24h</h6>
+                                <p class="text-slate-400 text-sm">(11) 99287-6219 / 0800 000 0000</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-11 h-11 bg-accent/20 rounded-xl flex items-center justify-center text-accent shrink-0">
+                                <i data-lucide="mail" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h6 class="text-white font-bold text-sm">E-mail Comercial</h6>
+                                <p class="text-slate-400 text-sm">contato@dunodetetizadora.com.br</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-4">
+                            <div class="w-11 h-11 bg-accent/20 rounded-xl flex items-center justify-center text-accent shrink-0">
+                                <i data-lucide="map-pin" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h6 class="text-white font-bold text-sm">Sede Administrativa</h6>
+                                <p class="text-slate-400 text-sm">Av. Principal, 1000 - Centro, São Paulo/SP</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="https://wa.me/5511992876219" target="_blank" class="btn-cta rounded-xl py-4 text-base">
+                        Falar com Especialista
+                        <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+                
+                <div class="lg:w-1/2 relative min-h-[250px] lg:min-h-auto rounded-[1.5rem] overflow-hidden m-4">
+                    <div class="absolute inset-0 grayscale hover:grayscale-0 transition-all duration-700">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d116964.8465697262!2d-46.73244675!3d-23.51458885!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce597d3419357d%3A0xe96431945f3c5b52!2zU8OjbyBQYXVsbywgU1A!5e0!3m2!1spt-BR!2sbr!4v1711915000000!5m2!1spt-BR!2sbr" 
+                            width="100%" height="100%" loading="lazy" title="Mapa DUNO" class="border-none">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         10. FOOTER
+    ═══════════════════════════════════════ -->
+    <footer class="bg-primary pt-20 pb-10 text-white relative overflow-hidden">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_bottom_right,rgba(16,185,129,0.05),transparent_50%)] pointer-events-none"></div>
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="grid md:grid-cols-4 gap-14 border-b border-white/5 pb-16">
+                <div class="col-span-2">
+                    <div class="flex items-center gap-2 mb-6">
+                        <div class="bg-accent p-2 rounded-xl">
+                            <i data-lucide="shield" class="w-6 h-6 text-white"></i>
+                        </div>
+                        <span class="text-2xl font-bold tracking-tight">DUNO<span class="text-accent">.</span></span>
+                    </div>
+                    <p class="text-slate-400 max-w-xs mb-8 leading-relaxed">
+                        Protegendo o que importa com ciência e tecnologia desde 2010. Qualidade atestada e certificado Anvisa.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" aria-label="Instagram" class="w-11 h-11 rounded-xl bg-white/5 flex items-center justify-center hover:bg-accent hover:text-white transition-all transform hover:-translate-y-1"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+                        <a href="#" aria-label="Facebook" class="w-11 h-11 rounded-xl bg-white/5 flex items-center justify-center hover:bg-accent hover:text-white transition-all transform hover:-translate-y-1"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+                        <a href="#" aria-label="LinkedIn" class="w-11 h-11 rounded-xl bg-white/5 flex items-center justify-center hover:bg-accent hover:text-white transition-all transform hover:-translate-y-1"><i data-lucide="linkedin" class="w-5 h-5"></i></a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h5 class="text-white font-bold mb-6 text-lg">Navegação</h5>
+                    <ul class="space-y-3 text-slate-400">
+                        <li><a href="#" class="footer-link hover:text-accent transition-colors text-sm">Início</a></li>
+                        <li><a href="#sobre" class="footer-link hover:text-accent transition-colors text-sm">Sobre Nós</a></li>
+                        <li><a href="#servicos" class="footer-link hover:text-accent transition-colors text-sm">Nossos Serviços</a></li>
+                        <li><a href="#feedback" class="footer-link hover:text-accent transition-colors text-sm">Depoimentos</a></li>
+                        <li><a href="#faq" class="footer-link hover:text-accent transition-colors text-sm">Dúvidas Frequentes</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h5 class="text-white font-bold mb-6 text-lg">Certificações</h5>
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-3 text-slate-400 text-sm bg-white/5 p-3 rounded-xl border border-white/5 hover:border-accent/30 transition-all">
+                            <i data-lucide="check-circle" class="text-accent w-4 h-4 shrink-0"></i>
+                            Registro Anvisa 3.011-2
+                        </div>
+                        <div class="flex items-center gap-3 text-slate-400 text-sm bg-white/5 p-3 rounded-xl border border-white/5 hover:border-accent/30 transition-all">
+                            <i data-lucide="award" class="text-accent w-4 h-4 shrink-0"></i>
+                            ISO 9001 Professional
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="pt-10 flex flex-col md:flex-row justify-between items-center text-xs text-slate-500 gap-4">
+                <p>&copy; 2024 DUNO Dedetizadora. CNPJ 00.000.000/0001-00. São Paulo/SP.</p>
+                <div class="flex gap-8">
+                    <a href="#" class="hover:text-white transition-colors">Políticas de Privacidade</a>
+                    <a href="#" class="hover:text-white transition-colors">Termos de Serviço</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ═══════════════════════════════════════
+         11. FLOATING WHATSAPP
+    ═══════════════════════════════════════ -->
+    <a href="https://wa.me/5511992876219" target="_blank" aria-label="Abrir WhatsApp" class="fixed bottom-6 right-6 z-[60] animate-float">
+        <div class="w-16 h-16 bg-[#25D366] rounded-full flex items-center justify-center text-white shadow-2xl whatsapp-pulse">
+            <svg style="width:2rem;height:2rem;fill:white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        </div>
+    </a>
+
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+
+        // ── Scroll Reveal (IntersectionObserver) ──────────────
+        const revealClasses = ['.reveal', '.reveal-left', '.reveal-right', '.reveal-scale'];
+        const revealObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+        document.querySelectorAll(revealClasses.join(',')).forEach(el => revealObserver.observe(el));
+
+        // ── Counter Animation ──────────────────────────────────
+        function animateCounter(el) {
+            const target = +el.getAttribute('data-target');
+            const duration = 1200;
+            const step = 16;
+            const increment = target / (duration / step);
+            let current = 0;
+            const timer = setInterval(() => {
+                current = Math.min(current + increment, target);
+                el.textContent = Math.ceil(current);
+                if (current >= target) clearInterval(timer);
+            }, step);
+        }
+
+        const counterObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.querySelectorAll('.counter').forEach(animateCounter);
+                    counterObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.4 });
+
+        const counterSection = document.querySelector('.stats-grid');
+        if (counterSection) counterObserver.observe(counterSection);
+    </script>
+
+    <!-- Schema.org Implementation -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "DUNO Dedetizadora",
+      "description": "Controle profissional de pragas urbanas em São Paulo e região.",
+      "url": "https://dunodetetizadora.com.br",
+      "telephone": "+5511992876219",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Av. Principal, 1000",
+        "addressLocality": "São Paulo",
+        "addressRegion": "SP",
+        "postalCode": "01001-000",
+        "addressCountry": "BR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -23.51458885,
+        "longitude": -46.73244675
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+        "opens": "00:00",
+        "closes": "23:59"
+      },
+      "sameAs": [
+        "https://www.facebook.com/dunodetetizadora",
+        "https://www.instagram.com/dunodetetizadora"
+      ]
+    }
+    </script>
+</body>
+</html>
